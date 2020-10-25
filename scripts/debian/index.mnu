@@ -1,0 +1,6 @@
+HEADER "Main Menu [$VER]"
+MENU "g" "* System Upgradable"        "$PWD/scripts/debian/install/ubuntu/ubuntu-upgrade.sh" "$PWD/scripts/debian/install/ubuntu"
+MENU "u" "* System Upgrade"           "$PWD/scripts/debian/install/ubuntu/ubuntu-update.sh"  "$PWD/scripts/debian/install/ubuntu"
+MENU "a" "* System Autoremove"        "$PWD/scripts/debian/install/ubuntu/ubuntu-remove.sh"  "$PWD/scripts/debian/install/ubuntu"
+MENU_
+MENU "M" "admm Maintenance Menu"      "$PWD/scripts/debian/admm.mnu"                         "$PWD/scripts/debian"
