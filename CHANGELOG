@@ -1,1 +1,31 @@
-/archiv/projects/Lazarus/admm/CHANGELOG
+2.0.0.13	Initial release on Gitlab
+2.0.0.14	Moved *.deb files from build/ to releases/
+		Moved *.pas files from / to src/
+		Moved admm.man from / to docs/
+2.0.0.15	Package name change from admm_$VER-full-$KERNEL.deb to admm-full_$VER-$KERNEL.deb
+2.0.0.16	Man pages for docs/de/ and docs/fr/ added
+2.0.0.17	Select button on key pressed before command execution
+2.0.0.18	Statistics with mySQL added
+		Unset defined Variables after execution
+2.0.0.19	Templates for mysql statements added
+		Cronjob for CPU, MEM and DISK statistics added
+2.0.0.20	Variable $PLG for Plugin folder added
+2.0.0.21	Statistics database extended
+2.0.0.22	Statistics database check and creation added
+		Statistics PHP Webpage added
+2.0.0.23	Statsistics database creation added
+2.0.0.24	Sensors added
+2.0.0.25	DELL Fan and chassis sensors added
+2.0.0.26	admm-newbase.tmpl modified
+2.0.0.27	Add Database user if not exists
+		Create admm Database if not exists
+2.0.0.28	jqplot added
+2.0.0.29	Coin functions added
+2.0.0.30	Templates moved to admm-plugins.tar.gz
+		admm-server.sh and admm-scripts.sh modified
+2.0.0.31	Shift-F-Keys addded
+2.0.0.32	HHEADER() added
+2.0.0.33	admm-server.sh modified
+2.0.0.34	admm-version.sh modified standard.logo added
+		Function key description shortned
+2.0.0.35	Ubuntu 20 Version
