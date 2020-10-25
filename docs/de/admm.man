@@ -1,0 +1,580 @@
+.\" Manpage for admm.
+.\" Contact automatix@unattended.ch to correct errors or typos.
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH man 8 "03 Mai 2020" 2.0.0.x admm
+.SH NAME
+admm \- ADMin Menü TUI
+.SH BESCHREIBUNG
+admm ist ein Administrator Menü TUI für Konsole basierend auf Shell scripts
+.br
+	
+.br
+admm [OPTIONEN] <Eingabe>
+.br
+	
+.SH ÜBERSICHT
+\- Die Grund Idee ist der Einsatz von existierenden Shell scripts in einem
+Menü
+.br
+	
+.br
+\- Starte admm und drücke F4 um index.mnu oder F3 um index.conf zu bearbeiten
+.br
+  Mit admm kann man Menüs und Scripts bearbeiten, neue Einträge einfügen und neue Scripts erstellen
+.br
+	
+.br
+\- Beim ausführen eines Befehls, wird die Bildschirmausgabe der Datei
+output.log angehängt
+.br
+  Um output.log per Email an $INFORM zu versenden starte admm \-e
+.br
+	
+.br
+\- Wenn eine Menü\- oder Script\- Datei editiert wird, erhöht sich die Version
+automatisch und
+.br
+  alle Änderungen werden als diff Ausgabe der Datei changes.log angehängt
+.br
+	
+.br
+\- Auf dem Master und den Klienten werden die Scripts vom Master Server= URL
+wenn angegeben
+.br
+  [admm.conf \-> Server=http://server.domain/share/admm\-scripts.tar.gz]
+.br
+  Auf einem Master Server kann man die Menü Dateien bearbeiten und für alle auf diesem Server speichern
+.br
+  mit [admm Maintenance Menu \-> Create admm\-scripts.tar.gz]
+.br
+	
+.br
+\- Um Emails zu versenden muss sSMTP oder mSMTP auf dem Master installiert
+werden
+.br
+  Man findet Installationen unter [System Installation Menu \-> System Software Menu]
+.br
+  Definiere [index.conf \-> INFORM=name@domain] mit der Admin Email Adresse
+.br
+	
+.br
+\- admm kann automatisch Schnelltasten Befehle abspielen mit \-\-run="X "
+.br
+  X ist die Schnelltaste aus dem Menü oder Untermenü, benutze ein " " um das Untermenü oder Menü zu verlassen
+.br
+  Wenn man \-e anhängt wird Benutzer $INFORM die Datei output.log gesendet
+.br
+  Nach dem versenden wird output.log gelöscht
+.br
+	
+.br
+\- Man kann Kommandozeilen Parameter erweitern mit eigenen Befehlen. Man muss
+dazu den Befehl einfügen in
+.br
+  index.conf [Commands] \-cmd="aa  "=Comment
+.br
+	
+.br
+\- GPG wird verwendet um Verschlüsselte Dateien mit Passwörtern zu erstellen
+und zu lesen.
+.br
+	
+.SH OPTIONEN
+\-h \-\-help			Optionen Hilfe anzeigen
+.br
+\-d \-\-debug=N		Debug Stufe definieren (siehe admm.conf)
+.br
+\-l \-\-log			admm.log Anzeigen
+.br
+\-o \-\-out			output.log Anzeigen
+.br
+\-c \-\-changes		changes.log Anzeigen
+.br
+\-s \-\-server=""		Server auswählen mit admm\-*.tar.gz
+.br
+\-r \-\-run="aM "	Automatisch Schnelltasten des Menüs ausführen
+.br
+\-e \-\-email		Sende Email mit output.log an $INFORM
+.br
+\-u				Starte System dist\-upgrade (siehe index.conf [Commands])
+.br
+\-a				Starte System autoremove (siehe index.conf [Commands])
+.br
+	
+.SH DATEIEN
+/usr/local/bin/admm							Ausführbare Datei
+.br
+/usr/local/etc/admm.conf						Konfiguration für admm
+.br
+/usr/local/share/admm/plugins/template/*.tmpl	Vorlagen für .man .mnu .sh
+.br
+/usr/local/share/admm/sripts/debian/index.mnu	Haupmenü für admm
+.br
+/usr/local/share/admm/sripts/debian/index.conf	Hauptmenü Konfiguration
+.br
+/usr/local/share/admm/sripts/debian/...			Ordner für Menü\- Shellscripts\- und
+andere Dateien der Scripts
+.br
+/usr/local/share/admm/admm.log				Logdatei von admm, einschalten mit  Debug=
+> 0 (Default = 1)
+.br
+/usr/local/share/admm/changes.log				Logdatei mit Änderungen von Menü\- und
+Script\- Dateien (Debug= > 0)
+.br
+/usr/local/share/admm/output.log				Logdatei mit ausgabe der ausgeführten
+Befehle (Debug= > 0)
+.br
+/usr/local/man/admm.man						Diese Seite
+.SH "FUNKTIONS TASTEN"
+F1 \- Hilfeseite anzeigen wenn vorhanden (drücke F6 für eine neue Seite)
+.br
+F2 \- Starte mc
+.br
+F3 \- Bearbeite index.conf (Globale Menü Konfiguration)
+.br
+F4 \- Bearbeite angezeigtes Menü mit mcedit
+.br
+F5 \- Bearbeite gewähltes Menü oder Script mit mcedit, wenn die Datei nicht
+existiert wird sie mit Vorlage erzeugt
+.br
+F6 \- Bearbeite existierende Hilfeseite oder erstelle eine neue
+.br
+F7 \- Ausgabe des letzten Befehls
+.br
+F8 \- Lade Hauptmenü
+.br
+F9 \- admm.log Anzeigen
+.br
+F10\- Beenden
+.br
+SF1\- Display admm.man
+.br
+SF2\- Run mc in /usr/local/share/admm
+.br
+SF3\- Edit admm.conf
+.br
+SF7\- Display output.log
+.br
+SF9\- Display changes.log
+.br
+	
+.SH "NAVIGATIONS TASTEN"
+AUF\-/AB\-Tasten	\- Menü position wählen
+.br
+RECHTS\-Taste	\- Untermenü öffnen (keine Scripts)
+.br
+LINKS\-Taste	\- Menü oder Untermenü verlassen
+.br
+LEER\-Taste	\- Menü oder Untermenü verlassen
+.br
+EINGABE		\- Gewählte Menü Position ausführen
+.br
+	
+.SH "MAUS TASTEN"
+LINKS		\- Taste auswählen durch klick, doppel\-klick ausführen des Befehls
+.br
+RECHTS		\- Taste auswählen durch klick, doppel\-klick bearbeiten der Datei
+.br
+	
+.SH "KONFIGURATION admm.conf"
+[Setup]
+.br
+    Debug=1						Debug mode 0=OFF 1=MIN 2=FILE 3=EVENT 4=FUNC 5=DATA 6=KEY 8=SCAN 9=ALL
+.br
+    Home=.						Home folder
+.br
+    Index=scripts/debian/index.mnu		Main menu file to load
+.br
+    SpaceLine=0					Spaces between menu lines
+.br
+    Background=2					Background mode 0=OFF 1=BRICKS 2=TEXT
+.br
+    ConsoleX=80					Console chars per line
+.br
+    ConsoleY=25					Console Lines per screen
+.br
+    
+.br
+[Editor]
+.br
+    Editor=mcedit					Default editor
+.br
+    Viewer=mcview					Default viewer
+.br
+	
+.br
+[Colors]
+.br
+    Background=7					Background color
+.br
+    ButtonBackground=7				Button background color
+.br
+    Button=6						Button color
+.br
+    ButtonKey=4					Button key color
+.br
+	
+.SH "KONFIGURATION index.conf"
+.br
+[Setup]
+.br
+    Version=					Menu file version (\fIIncremented after editing a file and stored in $VER\fP)
+.br
+    Password=					One time password will be saved crypted as Encrypted= (\fIdo not use spaces\fP)
+.br
+    Encrypted=					Crypted password after first run
+.br
+	
+.br
+[Global]						Global variables for script and menu files.
+.br
+    MASTER=localhost
+.br
+    DOMAIN=my.lan
+.br
+    INFORM=name@$DOMAIN
+.br
+	
+.br
+[Commands]					Format : \-cmd="Hotkeys"=Comment
+.br
+    \-u="U  "=Upgrade available new packages
+.br
+    \-a="A  "=Autoremove old packages
+.br
+    \-c="aC   "=Cleanup log files fo admm
+.br
+    \-ru="RU   "=Remote Upgrade available new packages on all node in $BACKUP
+.br
+    \-ra="RA   "=Autoremove old packages on all node in $BACKUP
+.br
+    \-rdm="RD0    "=Start rdesktop with node 0
+.br
+	
+.br
+[Keys]						Menu short keys filter character definition (\fISubsection also
+needed !\fP)
+.br
+    Master=!					Add !MENU to only see the link on this hosts
+.br
+
+.br
+[Master]						Menu short key hostname sections for filter (\fIonly hostname
+not FQDN\fP)
+.br
+    localhost=1
+.br
+	
+.SH "KONFIGURATION index.mnu"
+Available command are :
+.br
+	
+.br
+  \fBHEADER\fP "Menu title"
+.br
+  \fBMENU\fP "Hotkey" "Command title" "/menu/or/script"
+"/directory/for/menu/or/script" "Parameters"
+.br
+  \fBMENU_\fP
+.br
+	
+.br
+Predefined variables are :
+.br
+	
+.br
+  \fB$PWD\fP = admmm home directory (default: /usr/local/share/admm)
+.br
+  \fB$SWD\fP = Submenu or Script work directory
+.br
+  \fB$VER\fP = Menu version (automatically incremented on edit a file)
+.br
+  \fB$NOD\fP = Hostname of executing computer
+.br
+	
+.br
+Example index.mnu :
+.br
+  HEADER "Main Menu [$VER]"
+.br
+  MENU "m" "Maintenance Menu" "$PWD/install/maintain.mnu" "$PWD"
+.br
+  MENU "i" "Installation Menu" "$PWD/install/install.mnu" "$PWD/install"
+.br
+  MENU_
+.br
+  MENU "d" "Mount / Unmount Device" "$PWD/usb/mount.mnu" "$PWD/usb"
+.br
+  MENU "b" "admm Self Backup" "$PWD/config/backup.sh" "$PWD/config"
+.br
+	
+.SH "KONFIGURATION mnu.tmpl"
+HEADER "{HEADER}"
+.br
+MENU "1" " 1. {TITLE} Install" "{PATH}/install.sh" "{PATH}"
+.br
+	
+.SH "KONFIGURATION sh.tmpl"
+#!/bin/bash
+.br
+. $INC
+.br
+PWD=$(pwd)
+.br
+DST=~
+.br
+if [ ! "$1" == "" ]; then
+.br
+    PWD=$1
+.br
+fi
+.br
+HEADER "{TITLE}"
+.br
+    
+.SH "KONFIGURATION email.tmpl"
+To: (TO)
+.br
+Subject: (SUB)
+.br
+MIME\-Version: 1.0
+.br
+Content\-Type: multipart/mixed; boundary="\-"
+.br
+	
+.br
+\-\-\-
+.br
+Content\-Type: text/plain; charset=US\-ASCII
+.br
+	
+.br
+(BODY)
+.br
+	
+.br
+\-\-\-
+.br
+Content\-Type: application/octet\-stream; charset=US\-ASCII; name="(NAME)"
+.br
+Content\-Transfer\-Encoding: BASE64
+.br
+Content\-Disposition: attachment; filename="(NAME)"
+.br
+	
+.br
+(ATTACH)
+.br
+\-\-\-\-\-
+.br
+	
+.SH "KONFIGURATION man.tmpl"
+.\" Manpage for {NAME}
+\&.
+.br
+\&.TH man 1 {TITLE}
+.br
+\&.SH NAME
+.br
+    {NAME}
+.br
+\&.SH DESCRIPTION
+.br
+    {DESCRIPTION}
+.br
+\&.SH SYNOPSIS
+.br
+    {SYNOPSIS}
+.br
+\&.SH FILES
+.br
+    {FILES}
+.br
+\&.SH EXAMPLE
+.br
+    {EXAMPLE}
+.br
+\&.SH SEE ALSO
+.br
+    admm(8)
+.br
+\&.SH BUGS
+.br
+    {BUGS}
+.br
+\&.SH AUTHOR
+.br
+    admm (automatix@unattended.ch)
+.br
+	
+.SH "KONFIGURATION functions.inc"
+#!/bin/bash
+.br
+TRN="\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-"
+.br
+pushd() {
+.br
+  command pushd "$@" > /dev/null
+.br
+}
+.br
+
+#\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.br
+popd() {
+.br
+  command popd "$@" > /dev/null
+.br
+}
+.br
+
+#\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.br
+HEADER() {
+.br
+  printf "%s\n%s\n%s\n" "$TRN" "\-\-\- $1" "$TRN"
+.br
+}
+.br
+#\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.br
+finish() {
+.br
+  HEADER "Finished"
+.br
+}
+.br
+
+#\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.br
+folder_exists_old() {
+.br
+  if [ \-d "$1" ]; then
+.br
+  DT=$(date +%Y%m%d_%H%M)
+.br
+  echo "Move folder [$1] to [$1_$DT]"
+.br
+  mv $1 $1_$DT
+.br
+  fi
+.br
+}
+.br
+
+#\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.br
+press_any_key() {
+.br
+    printf "\nPress any key to continue\n"
+.br
+    while [ true ] ; do
+.br
+      read \-t 3 \-n 1
+.br
+      if [ $? = 0 ] ; then
+.br
+        #clear
+.br
+        exit 0
+.br
+      fi
+.br
+    done
+.br
+}
+.br
+
+#\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.br
+wait_any_key() {
+.br
+    while [ true ] ; do
+.br
+      read \-t 3 \-n 1
+.br
+      if [ $? = 0 ] ; then
+.br
+        exit 0
+.br
+      fi
+.br
+    done
+.br
+}
+.br
+
+#\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.br
+intro() {
+.br
+  HEADER "ADMin Menu (c) unattended.ch"
+.br
+}
+.br
+
+#\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.br
+onlymsg() {
+.br
+  if [ $? \-gt 0 ]; then
+.br
+  echo "ERROR : $1"
+.br
+  else
+.br
+  echo "DONE"
+.br
+  fi
+.br
+}
+.br
+
+#\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.br
+errmsg() {
+.br
+  if [ $? \-gt 0 ]; then
+.br
+  echo "ERROR : $1"
+.br
+  exit $?
+.br
+  fi
+.br
+}
+.br
+
+#\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.br
+retval() {
+.br
+  if [ $? \-gt 0 ]; then
+.br
+  echo "ERROR : $1"
+.br
+  exit $?
+.br
+  else
+.br
+  echo "DONE"
+.br
+  fi
+.br
+}
+.br
+	
+.SH BEISPIEL
+Siehe /usr/local/share/admm/scripts für index.mnu und index.conf Beispiele.
+.br
+	
+.SH "SIEHE AUCH"
+admm(8)
+.SH FEHLER
+Keine bekannten Fehler.
+.SH AUTOR
+Automatix (automatix@unattended.ch)

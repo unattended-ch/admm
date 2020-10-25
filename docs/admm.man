@@ -1,0 +1,560 @@
+.\" Manpage for admm.
+.\" Contact automatix@unattended.ch to correct errors or typos.
+.TH man 8 "03 May 2020" "2.0.0.x" "admm"
+.SH NAME
+admm \- ADMin Menu TUI
+.SH DESCRIPTION
+admm is a administrator menu TUI for console based on shell scripts
+.br
+	
+.br
+admm [OPTIONS] <Enter>
+.br
+	
+.SH SYNOPSIS
+- The basic idea is to use existing shell scripts and display them in a menu
+.br
+	
+.br
+- Start admm and press F4 to edit index.mnu or press F3 to edit index.conf for your needs
+.br
+  With admm you can edit the menus and scripts, append a new entry to menus and add new scripts
+.br
+	
+.br
+- If a command is executed, the screen output will be appended to output.log
+.br
+  To send output.log as email to $INFORM run admm -e
+.br
+	
+.br
+- If a menu or script file is edited, the menu version will be incremented and
+.br
+  all modifications are saved as diff output in file changes.log
+.br
+	
+.br
+- On Master and Clients you always load the scripts from the Master Server= URL if specified
+.br
+  [admm.conf -> Server=http://server.domain/share/admm-scripts.tar.gz]
+.br
+  On a master server you can modify the menu files and save them for all nodes on this server
+.br
+  with [admm Maintenance Menu -> Create admm-scripts.tar.gz]
+.br
+	
+.br
+- To send emails you must install sSMTP or mSMTP on the master
+.br
+  You can find installations under [System Installation Menu -> System Software Menu]
+.br
+  Define [index.conf -> INFORM=name@domain] with admin email address
+.br
+	
+.br
+- admm can autoplay hotkey commands with --run="X  "
+.br
+  X is the hotkey character from Menu or Submenu, use " " to leave a submenu or "  " to exit menu
+.br
+  If you append -e user $INFORM will be informed with output.log
+.br
+  After sending the email output.log will be deleted
+.br
+	
+.br
+- You can extend command line parameters with your own commands. You must insert your command in
+.br
+  index.conf [Commands] -cmd="aa  "=Comment
+.br
+	
+.br
+- GPG is used to create and read encrypted password files for scripts.
+.br
+	
+.SH OPTIONS
+-h --help			Display options help
+.br
+-d --debug=N		Set debug level (see admm.conf)
+.br
+-l --log			Display admm.log
+.br
+-o --out			Display output.log
+.br
+-c --changes		Display changes.log
+.br
+-s --server=""		Select server with admm-*.tar.gz
+.br
+-r --run="aM   "	Autorun hotkey commands from Menu
+.br
+-e --email		Send email with output.log to $INFORM
+.br
+-u				Run system dist-upgrade (see index.conf [Commands])
+.br
+-a				Run system autoremove (see index.conf [Commands])
+.br
+	
+.SH FILES
+/usr/local/bin/admm							Executable
+.br
+/usr/local/etc/admm.conf						Configuration for admm
+.br
+/usr/local/share/admm/plugins/template/*.tmpl	Templates for .man .mnu .sh
+.br
+/usr/local/share/admm/sripts/debian/index.mnu	Main menu for admm
+.br
+/usr/local/share/admm/sripts/debian/index.conf	Main menu configuration
+.br
+/usr/local/share/admm/sripts/debian/...			Location for menus and shell scripts or other files used by scripts
+.br
+/usr/local/share/admm/admm.log				Log file of admm, to enable set Debug= > 0 (Default = 1)
+.br
+/usr/local/share/admm/changes.log				Log file with changes of menu and script files (Debug= > 0)
+.br
+/usr/local/share/admm/output.log				Log file with output of executed scripts (Debug= > 0)
+.br
+/usr/local/man/admm.man						This page
+	
+.SH FUNCTION KEYS
+F1 - Display Help if available (press F6 to create a new man page)
+.br
+F2 - Start mc
+.br
+F3 - Edit index.conf (global menu configuration)
+.br
+F4 - Edit displayed Menu with mcedit
+.br
+F5 - Edit selected Menu or Shell script with mcedit, if not exists create it with template
+.br
+F6 - Edit existing Help or create a new man page
+.br
+F7 - Output of last executed command
+.br
+F8 - Load Mainmenu
+.br
+F9 - Display admm.log
+.br
+F10- Exit
+.br
+SF1- Display admm.man
+.br
+SF2- Run mc in /usr/local/share/admm
+.br
+SF3- Edit admm.conf
+.br
+SF7- Display output.log
+.br
+SF9- Display changes.log
+.br
+	
+.SH NAVIGATION KEYS
+UP-/DOWN-Arrow	- Select Menu position
+.br
+RIGHT-Arrow	- Open Submenu (not Shell scripts)
+.br
+LEFT-Arrow	- Exit from Menu or Submenu
+.br
+SPACE		- Exit from Menu or Submenu
+.br
+ENTER		- Execute selected Menu position
+.br
+	
+.SH MOUSE KEYS
+LEFT			- Select a button by click, double-click to execute the command
+.br
+RIGHT		- Select a button by click, double-click to edit the file
+.br
+	
+.SH CONFIGURATION admm.conf
+[Setup]
+.br
+    Debug=1						Debug mode 0=OFF 1=MIN 2=FILE 3=EVENT 4=FUNC 5=DATA 6=KEY 8=SCAN 9=ALL
+.br
+    Home=.						Home folder
+.br
+    Index=scripts/debian/index.mnu		Main menu file to load
+.br
+    SpaceLine=0					Spaces between menu lines
+.br
+    Background=2					Background mode 0=OFF 1=BRICKS 2=TEXT
+.br
+    ConsoleX=80					Console chars per line
+.br
+    ConsoleY=25					Console Lines per screen
+.br
+    
+.br
+[Editor]
+.br
+    Editor=mcedit					Default editor
+.br
+    Viewer=mcview					Default viewer
+.br
+	
+.br
+[Colors]
+.br
+    Background=7					Background color
+.br
+    ButtonBackground=7				Button background color
+.br
+    Button=6						Button color
+.br
+    ButtonKey=4					Button key color
+.br
+	
+.SH CONFIGURATION index.conf
+.br
+[Setup]
+.br
+    Version=					Menu file version (\fIIncremented after editing a file and stored in $VER\fR)
+.br
+    Password=					One time password will be saved crypted as Encrypted= (\fIdo not use spaces\fR)
+.br
+    Encrypted=					Crypted password after first run
+.br
+	
+.br
+[Global]						Global variables for script and menu files.
+.br
+    MASTER=localhost
+.br
+    DOMAIN=my.lan
+.br
+    INFORM=name@$DOMAIN
+.br
+	
+.br
+[Commands]					Format : -cmd="Hotkeys"=Comment
+.br
+    -u="U  "=Upgrade available new packages
+.br
+    -a="A  "=Autoremove old packages
+.br
+    -c="aC   "=Cleanup log files fo admm
+.br
+    -ru="RU   "=Remote Upgrade available new packages on all node in $BACKUP
+.br
+    -ra="RA   "=Autoremove old packages on all node in $BACKUP
+.br
+    -rdm="RD0    "=Start rdesktop with node 0
+.br
+	
+.br
+[Keys]						Menu short keys filter character definition (\fISubsection also needed !\fR)
+.br
+    Master=!					Add !MENU to only see the link on this hosts
+.br
+
+.br
+[Master]						Menu short key hostname sections for filter (\fIonly hostname not FQDN\fR)
+.br
+    localhost=1
+.br
+	
+.SH CONFIGURATION index.mnu
+Available command are  :
+.br
+	
+.br
+	\fBHEADER\fR "Menu title"
+.br
+	\fBMENU\fR "Hotkey" "Command title" "/menu/or/script" "/directory/for/menu/or/script" "Parameters"
+.br
+	\fBMENU_\fR
+.br
+	
+.br
+Predefined variables are  :
+.br
+	
+.br
+	\fB$PWD\fR = admmm home directory (default: /usr/local/share/admm)
+.br
+	\fB$SWD\fR = Submenu or Script work directory
+.br
+	\fB$VER\fR = Menu version (automatically incremented on edit a file)
+.br
+	\fB$NOD\fR = Hostname of executing computer
+.br
+	
+.br
+Example index.mnu :
+.br
+	HEADER "Main Menu [$VER]"
+.br
+	MENU "m" "Maintenance Menu"               "$PWD/install/maintain.mnu"       "$PWD"
+.br
+	MENU "i" "Installation Menu"              "$PWD/install/install.mnu"        "$PWD/install"
+.br
+	MENU_
+.br
+	MENU "d" "Mount / Unmount Device"         "$PWD/usb/mount.mnu"              "$PWD/usb"
+.br
+	MENU "b" "admm Self Backup"               "$PWD/config/backup.sh"           "$PWD/config"
+.br
+	
+.SH "CONFIGURATION mnu.tmpl"
+HEADER "{HEADER}"
+.br
+MENU "1" " 1. {TITLE} Install" "{PATH}/install.sh" "{PATH}"
+.br
+	
+.SH "CONFIGURATION sh.tmpl"
+#!/bin/bash
+.br
+. $INC
+.br
+PWD=$(pwd)
+.br
+DST=~
+.br
+if [ ! "$1" == "" ]; then
+.br
+    PWD=$1
+.br
+fi
+.br
+HEADER "{TITLE}"
+.br
+    
+.SH "CONFIGURATION email.tmpl"
+To: (TO)
+.br
+Subject: (SUB)
+.br
+MIME-Version: 1.0
+.br
+Content-Type: multipart/mixed; boundary="-"
+.br
+	
+.br
+---
+.br
+Content-Type: text/plain; charset=US-ASCII
+.br
+	
+.br
+(BODY)
+.br
+	
+.br
+---
+.br
+Content-Type: application/octet-stream; charset=US-ASCII; name="(NAME)"
+.br
+Content-Transfer-Encoding: BASE64
+.br
+Content-Disposition: attachment; filename="(NAME)"
+.br
+	
+.br
+(ATTACH)
+.br
+-----
+.br
+	
+.SH "CONFIGURATION man.tmpl"
+    .\" Manpage for {NAME}
+.br
+    .TH man 1 {TITLE}
+.br
+    .SH NAME
+.br
+    {NAME}
+.br
+    .SH DESCRIPTION
+.br
+    {DESCRIPTION}
+.br
+    .SH SYNOPSIS
+.br
+    {SYNOPSIS}
+.br
+    .SH FILES
+.br
+    {FILES}
+.br
+    .SH EXAMPLE
+.br
+    {EXAMPLE}
+.br
+    .SH SEE ALSO
+.br
+    admm(8) 
+.br
+    .SH BUGS
+.br
+    {BUGS}
+.br
+    .SH AUTHOR
+.br
+    admm (automatix@unattended.ch)
+.br
+	
+.SH "CONFIGURATION functions.inc"
+#!/bin/bash
+.br
+TRN="-------------------------------------------------------------------------------"
+.br
+pushd() {
+.br
+	command pushd "$@" > /dev/null
+.br
+}
+.br
+
+#------------------------------------------------------------------------------------------
+.br
+popd() {
+.br
+	command popd "$@" > /dev/null
+.br
+}
+.br
+
+#------------------------------------------------------------------------------------------
+.br
+HEADER() {
+.br
+	printf "%s\n%s\n%s\n" "$TRN" "--- $1" "$TRN"
+.br
+}
+.br
+#------------------------------------------------------------------------------------------
+.br
+finish() {
+.br
+	HEADER "Finished"
+.br
+}
+.br
+
+#------------------------------------------------------------------------------------------
+.br
+folder_exists_old() {
+.br
+	if [ -d "$1" ]; then
+.br
+		DT=$(date +%Y%m%d_%H%M)
+.br
+		echo "Move folder [$1] to [$1_$DT]"
+.br
+		mv $1 $1_$DT
+.br
+	fi
+.br
+}
+.br
+
+#------------------------------------------------------------------------------------------
+.br
+press_any_key() {
+.br
+    printf "\nPress any key to continue\n"
+.br
+    while [ true ] ; do
+.br
+      read -t 3 -n 1
+.br
+      if [ $? = 0 ] ; then
+.br
+        #clear
+.br
+        exit 0
+.br
+      fi
+.br
+    done
+.br
+}
+.br
+
+#------------------------------------------------------------------------------------------
+.br
+wait_any_key() {
+.br
+    while [ true ] ; do
+.br
+      read -t 3 -n 1
+.br
+      if [ $? = 0 ] ; then
+.br
+        exit 0
+.br
+      fi
+.br
+    done
+.br
+}
+.br
+
+#------------------------------------------------------------------------------------------
+.br
+intro() {
+.br
+	HEADER "ADMin Menu (c) unattended.ch"
+.br
+}
+.br
+
+#------------------------------------------------------------------------------------------
+.br
+onlymsg() {
+.br
+	if [ $? -gt 0 ]; then
+.br
+		echo "ERROR : $1"
+.br
+	else
+.br
+		echo "DONE"
+.br
+	fi
+.br
+}
+.br
+
+#------------------------------------------------------------------------------------------
+.br
+errmsg() {
+.br
+	if [ $? -gt 0 ]; then
+.br
+		echo "ERROR : $1"
+.br
+		exit $?
+.br
+	fi
+.br
+}
+.br
+
+#------------------------------------------------------------------------------------------
+.br
+retval() {
+.br
+	if [ $? -gt 0 ]; then
+.br
+		echo "ERROR : $1"
+.br
+		exit $?
+.br
+	else
+.br
+		echo "DONE"
+.br
+	fi
+.br
+}
+.br
+	
+.SH EXAMPLE
+Look at /usr/local/share/admm/scripts for index.mnu and index.conf example.
+.br
+	
+.SH SEE ALSO
+admm(8) 
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Automatix (automatix@unattended.ch)
