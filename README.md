@@ -1,7 +1,5 @@
 [README.md - German](docs/de/README.md)
 
-[README.md - French](docs/fr/README.md)
-
 
 
 ### NAME
