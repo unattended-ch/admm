@@ -110,6 +110,8 @@
 
 - [admm.conf](admm.conf)
 
+- [admm.man](docs/admm.man)
+
 - [scripts/debian/index.mnu](scripts/debian/index.mnu)
 
 - [scripts/debian/index.conf](scripts/debian/index.conf)
