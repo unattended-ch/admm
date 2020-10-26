@@ -1,7 +1,5 @@
 [README.md - Englisch](/README.md)
 
-[README.md - Französisch](docs/fr/README.md)
-
 
 
 ### NAME
@@ -121,6 +119,8 @@
 ### KONFIGURATION
 
 - [admm.conf](admm.conf)
+
+- [admm.man](docs/admm.man)
 
 - [scripts/debian/index.mnu](scripts/debian/index.mnu)
 

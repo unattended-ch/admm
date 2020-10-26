@@ -1,5 +1,5 @@
 .\" Manpage for admm.
-.\" Contact automatix@unattended.ch to correct errors or typos.
+.\" Contact github@unattended.ch to correct errors or typos.
 .TH man 8 "03 May 2020" "2.0.0.x" "admm"
 .SH NAME
 admm \- ADMin Menu TUI
@@ -557,4 +557,4 @@ admm(8)
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Automatix (automatix@unattended.ch)
+Automatix (github@unattended.ch)

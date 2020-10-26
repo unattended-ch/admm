@@ -1,5 +1,5 @@
 .\" Manpage for admm.
-.\" Contact automatix@unattended.ch to correct errors or typos.
+.\" Contact github@unattended.ch to correct errors or typos.
 .\"*******************************************************************
 .\"
 .\" This file was generated with po4a. Translate the source file.
@@ -577,4 +577,4 @@ admm(8)
 .SH FEHLER
 Keine bekannten Fehler.
 .SH AUTOR
-Automatix (automatix@unattended.ch)
+Automatix (github@unattended.ch)
