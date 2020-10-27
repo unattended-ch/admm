@@ -1,0 +1,21 @@
+HEADER "admm Maintenance Menu"
+!MENU "b" "* Build admm-scripts.tar.gz" "$SWD/admm-scripts.sh"                           "$SWD"
+MENU "a" "* View admm.log"              "sudo $VIEWER $PWD/admm.log"                     ""
+MENU "c" "* View changes.log"           "sudo $VIEWER $PWD/changes.log"                  ""
+MENU "o" "* View output.log"            "sudo $VIEWER $PWD/output.log"                   ""
+MENU_
+MENU "e" "* Edit admm.conf"             "sudo $EDITOR /usr/local/etc/admm.conf"          ""
+MENU "f" "* Edit functions.inc"         "sudo $EDITOR $PWD/scripts/debian/functions.inc" ""
+MENU "m" "* Edit email.tmpl"            "sudo $EDITOR $PWD/plugins/template/email.tmpl"  ""
+MENU "u" "* Edit mnu.tmpl"              "sudo $EDITOR $PWD/plugins/template/mnu.tmpl"    ""
+MENU "n" "* Edit man.tmpl"              "sudo $EDITOR $PWD/plugins/template/man.tmpl"    ""
+MENU "s" "* Edit sh.tmpl"               "sudo $EDITOR $PWD/plugins/template/sh.tmpl"     ""
+MENU_
+&MENU "G" "* Git GUI"                   "git gui citool"                                 ""
+&MENU "R" "* Compile on Raspi"          "$SWD/updates/raspi-makeadmm.sh"                 "$SWD"
+&MENU "S" "* Window Screenshot"         "$SWD/updates/admm-screenshot.sh"                "$SWD"
+&MENU_
+MENU "O" "* Set admm Owner"             "sudo chown -v $USER.$USER $PWD -R"              ""
+MENU "C" "* Cleanup Logfiles"           "sudo rm -vf $PWD/*.log -R"                      ""
+MENU_
+MENU "M" "* Manpage for admm"           "$VIEWER /usr/local/$MANLANG/man8/admm.8.gz"     ""
