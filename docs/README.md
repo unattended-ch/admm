@@ -23,7 +23,7 @@
     - I use poedit for tranlations.
 #####    You have to install [poedit]  package from ubuntu or debian
     - When you edit the .po file always copy original text and replace english with your
-      language. to preserve formatting.
+      language to preserve formatting.
 
     - Please send me your .po files back for integration in the installer package
 
