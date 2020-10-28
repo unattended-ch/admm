@@ -10,5 +10,11 @@
     5. Run po-update.sh to update files for all languages in LNG=
 
 #### Tranlating .po files
-    I use poedit for tranlations.
-    You have to install [poedit]  package from ubuntu or debian
+    - I use poedit for tranlations.
+    - You have to install [poedit]  package from ubuntu or debian
+    - When you edit the .po file always copy original text and replace english with your
+      language. to preserve formatting.
+
+    - Please send me your .po files back for integration in the installer package
+
+####Thank you in advance for your contribution!
