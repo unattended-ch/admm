@@ -9,4 +9,4 @@
 
 #### admm is also as Windows setup available
 
-    - Please cantact me for Windows version
+    - Please contact me for Windows version
