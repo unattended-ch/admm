@@ -1,5 +1,8 @@
 ## README.md and admm.man language translation
 
+    Translation of language de is finished.
+    All other languages are unfinished.
+
 #### Original files for translation
     ../README.md
     ./admm.man
