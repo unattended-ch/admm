@@ -14,7 +14,6 @@
 
        admm [OPTIONS] <Enter>
 
-!       [Overview](/docs/presentation/admm-overview-de.mp4)
 
 
 ### SYNOPSIS
@@ -117,3 +116,6 @@
 
 - [scripts/debian/index.conf](scripts/debian/index.conf)
 
+### PRESENTATION
+
+- [admm Overview DE](docs/presentation/admm-overview-de.mp4)
