@@ -1,4 +1,4 @@
-## README.md and admm.man language support
+## README.md and admm.man language translation
 
 #### Translation Scripts
 #####    To use the scripts you have to install [po4a] package from ubuntu or debian
@@ -7,7 +7,7 @@
     2. Only when LNG= has changed you have to run po-create.sh
     3. Run po-translate.sh for translation on all languages in LNG=
     4. Edit the .po files
-    5. Run po-update.sh to update files for all languages in LNG=
+    5. Run po-update.sh to generate files for all languages in LNG=
 
 #### Tranlating .po files
     - I use poedit for tranlations.
