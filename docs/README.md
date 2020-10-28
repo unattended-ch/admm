@@ -1,4 +1,4 @@
-### README.md and admm.man language support
+## README.md and admm.man language support
 
 #### Translation Scripts
 #####    To use the scripts you have to install [po4a] package from ubuntu or debian
