@@ -14,7 +14,7 @@
 
        admm [OPTIONS] <Enter>
 
-![	Overview](/docs/presentation/admm-overview-de.mp4)
+!	[Overview](/docs/presentation/admm-overview-de.mp4)
 
 
 ### SYNOPSIS
