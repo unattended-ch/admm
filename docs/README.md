@@ -17,4 +17,4 @@
 
     - Please send me your .po files back for integration in the installer package
 
-####Thank you in advance for your contribution!
+#### Thank you in advance for your contribution!
