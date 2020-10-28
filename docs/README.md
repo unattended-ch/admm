@@ -1,6 +1,16 @@
 ## README.md and admm.man language translation
 
-#### Translation Scripts
+#### Original files for translation
+    ../README.md
+    ./admm.man
+
+#### Translated files
+    ./[xx]/README.md
+    ./[xx]/admm.man
+
+    xx = Language short code en, de, fr ...
+
+#### Translation scripts
 #####    To use the scripts you have to install [po4a] package from ubuntu or debian
 
     1. Edit the po-*.sh scripts replace LNG="de fr" with your languages
@@ -11,7 +21,7 @@
 
 #### Tranlating .po files
     - I use poedit for tranlations.
-    - You have to install [poedit]  package from ubuntu or debian
+#####    You have to install [poedit]  package from ubuntu or debian
     - When you edit the .po file always copy original text and replace english with your
       language. to preserve formatting.
 
