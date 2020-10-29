@@ -1,5 +1,6 @@
 [README.md - German](docs/de/README.md)
 
+[Tutorial Videos](docs/presentation/)
 
 
 ### NAME
@@ -116,6 +117,3 @@
 
 - [scripts/debian/index.conf](scripts/debian/index.conf)
 
-### PRESENTATION
-
-- [Videos](docs/presentation/)
