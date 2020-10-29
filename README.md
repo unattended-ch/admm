@@ -15,7 +15,7 @@
 
        admm [OPTIONS] <Enter>
 
-
+       admm is written with Lazarus and the freevision package
 
 ### SYNOPSIS
 
