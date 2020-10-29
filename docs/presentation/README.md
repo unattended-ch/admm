@@ -1,4 +1,4 @@
-### admm Video presentations
+### admm Video tutorials
 
 ![admm-install-de.mp4](admm-install-de.mp4)	- Installation of admm in german
 
