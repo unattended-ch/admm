@@ -45,14 +45,22 @@ finish() {
 	HEADER "Finished"
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : src_exists
+# Description : Check if $SRC is defined else set pwd
+# Parameters  : none
+#----------------------------------------------------------------------
 src_exists() {
 	if [ "$SRC" == "" ]; then
 		SRC=$(pwd)
 	fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : build_exists
+# Description : Check if $BUILD is defined else exit with error
+# Parameters  : none
+#----------------------------------------------------------------------
 build_exists() {
 	if [ "$BUILD" == "" ]; then
 		echo "BUILD is not defined !"
@@ -62,7 +70,11 @@ build_exists() {
 	fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : stick_exists
+# Description : Check if $STICK is defined else exit with error
+# Parameters  : none
+#----------------------------------------------------------------------
 stick_exists() {
 	if [ "$STICK" == "" ]; then
 		echo "STICK is not defined !"
@@ -72,12 +84,20 @@ stick_exists() {
 	fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : set_now
+# Description : Define variable $NOW with aktual time
+# Parameters  : 
+#----------------------------------------------------------------------
 set_now() {
 	NOW=$(date "+%Y.%m.%d %H:%M")
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : folder_exists_old [folder]
+# Description : If folder exists rename it to folder_YYYYMMDD_HHMM
+# Parameters  : [folder] Folder to search
+#----------------------------------------------------------------------
 folder_exists_old() {
 	if [ -d "$1" ]; then
 		DT=$(date +%Y%m%d_%H%M)
@@ -86,7 +106,11 @@ folder_exists_old() {
 	fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : press_any_key
+# Description : PressAnyKey message
+# Parameters  : none
+#----------------------------------------------------------------------
 press_any_key() {
     printf "\nPress any key to continue\n"
     while [ true ] ; do
@@ -98,7 +122,11 @@ press_any_key() {
     done
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : wait_any_key
+# Description : Wait for key press
+# Parameters  : none
+#----------------------------------------------------------------------
 wait_any_key() {
     while [ true ] ; do
       read -t 3 -n 1
@@ -108,12 +136,20 @@ wait_any_key() {
     done
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : intro
+# Description : Display intro header
+# Parameters  : none
+#----------------------------------------------------------------------
 intro() {
 	HEADER "ADMin Menu (c) unattended.ch"
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : onlymsg [comment]
+# Description : Display only last error message
+# Parameters  : [comment]
+#----------------------------------------------------------------------
 onlymsg() {
 	if [ $? -gt 0 ]; then
 		echo "ERROR : $1"
@@ -122,7 +158,11 @@ onlymsg() {
 	fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : errmsg [comment]
+# Description : Display last error message and terminate
+# Parameters  : [comment]
+#----------------------------------------------------------------------
 errmsg() {
 	if [ $? -gt 0 ]; then
 		echo "ERROR : $1"
@@ -145,12 +185,20 @@ calc() {
     awk "BEGIN { print "$*" }";
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : set_starttime
+# Description : Define variable $START with actual time
+# Parameters  : none
+#----------------------------------------------------------------------
 set_starttime() {
 	export START=$(date +%s)
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : elapsed [$START]
+# Description : Display elapsed time
+# Parameters  : [$START] variable must be set with set_starttime()
+#----------------------------------------------------------------------
 elapsed() {
     if [ ! "$1" == "" ]; then
         ENDE=$(date +%s)
@@ -235,9 +283,10 @@ read_last_date() {
 git_update_log() {
     PAC="$(basename $1)"
     FOUND=$(cat $2 | grep $PAC)
+    REPL="s/$FOUND/$PAC=$3/g"
     HEADER "$PAC [$FOUND]"
     if [ ! "$FOUND" == "" ]; then
-        sed -i "/$FOUND/$PAC=$3/" $2
+        sed -i $REPL $2
         #sed -i '/$PAC=$LAST/c\/' $2
     else
         echo "$PAC=$3" >> $2
