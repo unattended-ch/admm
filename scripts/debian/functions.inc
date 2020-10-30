@@ -1,25 +1,46 @@
 #!/bin/bash
 TRN="-------------------------------------------------------------------------------"
 export GPG_TTY=$(tty)
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : pushd [folder]
+# Description : Remove messages from pushd
+# Parameters  : [folder] Folder to push
+#----------------------------------------------------------------------
 pushd() {
 	command pushd "$@" > /dev/null
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : popd
+# Description : Remove messages from popd
+# Parameters  :
+#----------------------------------------------------------------------
 popd() {
 	command popd "$@" > /dev/null
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : HEADER [message]
+# Description : Display a header with message
+# Parameters  : [message] Message to display
+#----------------------------------------------------------------------
 HEADER() {
 	printf "%s\n%s\n%s\n" "$TRN" "--- $1" "$TRN"
 }
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : HHEADER [message]
+# Description : Display a half header with message
+# Parameters  : [message] Message to display
+#----------------------------------------------------------------------
 HHEADER() {
 	printf "%s\n%s\n" "--- $1" "$TRN"
 }
-#------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------
+# Function    : finish
+# Description : Display finish message
+# Parameters  :
+#----------------------------------------------------------------------
 finish() {
 	HEADER "Finished"
 }
@@ -137,12 +158,20 @@ elapsed() {
         printf '\nTime elapsed : %02d:%02d:%02d:%02d\n' $((T/86400)) $((T/3600%24)) $((T/60%60)) $((T%60))
     fi
 }
-#------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------
+# Function    : send_email [email] [subject] [body]
+# Description : Send email with new versions found
+# Parameters  : [email]    Email address to send
+#               [subject]  Subject text
+#               [body]     Body text
+#----------------------------------------------------------------------
 send_email() {
     # Check if SSMTP or MSMTP is installed
     RUN="no"
     DST=~
-    if [ -f "/etc/ssmtp/ssmtp.conf" ]; then
+    SSMTP=$(sudo ls /etc/ssmtp/ssmtp.conf)
+    if [ ! "$SSMTP" == "" ]; then
         RUN="yes"
     fi
     if [ -f "$DST/.msmtprc" ]; then
@@ -179,10 +208,15 @@ send_email() {
     fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : read_last_date [reponame] [logfile]
+# Description : Read last date from logfile
+# Parameters  : [repo name]  Name of repository
+#               [logfile]    Logfile name
+#----------------------------------------------------------------------
 read_last_date() {
-    PAC="$(basename $2)"
-    DT=$(cat $1 | grep $PAC | cut -d '=' -f 2)
+    PAC="$(basename $1)"
+    DT=$(cat $2 | grep $PAC | cut -d '=' -f 2)
     if [ ! "$DT" == "" ]; then
         export LAST=$DT
     else
@@ -191,33 +225,55 @@ read_last_date() {
 }
 
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : git_update_log  [version]
+# Description : Update logfile with new version
+# Parameters  : [repo name]  Name of repository
+#               [logfile]    Logfile name
+#               [version]    New version found
+#----------------------------------------------------------------------
 git_update_log() {
-    PAC="$(basename $2)"
-    FOUND=$(cat $1 | grep $PAC)
+    PAC="$(basename $1)"
+    FOUND=$(cat $2 | grep $PAC)
+    HEADER "$PAC [$FOUND]"
     if [ ! "$FOUND" == "" ]; then
-        sed -i -e "s/$FOUND/$PAC=$3/" $1
-        #sed '/$FOUND/d' $1 > $1
-        #sed -i '/$PAC=$LAST/c\/' $1
+        sed -i "/$FOUND/$PAC=$3/" $2
+        #sed -i '/$PAC=$LAST/c\/' $2
     else
-        echo "$PAC=$3" >> $1
+        echo "$PAC=$3" >> $2
     fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : git_version [reponame] [logfile] [version]
+# Description : Get version of github repository
+# Parameters  : [repo name]  Name of repository
+#               [logfile]    Logfile name
+#               [version]    New version found
+#----------------------------------------------------------------------
 git_version() {
-    read_last_date $2 $1
-    git_update_log $2 $1 $3
+    read_last_date $1 $2
+    git_update_log $1 $2 $3
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : git_ver [repo name]
+# Description : Get version of github repository
+# Parameters  : [repo name]  Name of repository
+#----------------------------------------------------------------------
 git_ver() {
     curl --silent "https://api.github.com/repos/$1/releases/latest" -o $(pwd)/latest  # Get latest release from GitHub api
     VERS=$(cat $(pwd)/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')             # Pluck JSON value
     echo "$VERS"
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : git_latest [repo name] [logfile]
+# Description : Get latest version of github repository
+#               Send email if new version is available
+# Parameters  : [repo name]  Name of repository
+#               [logfile]    Logfile name
+#----------------------------------------------------------------------
 git_latest() {
     curl --silent "https://api.github.com/repos/$1/releases/latest" -o $(pwd)/latest  # Get latest release from GitHub api
     VERS=$(cat $(pwd)/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')             # Pluck JSON value
@@ -228,15 +284,15 @@ git_latest() {
     fi
     git_version $1 $2 "$VERS"
     if [ ! "$VERS" == "$LAST" ]; then
-        printf "GITHUB - NEW Version available [$1] !\n"
+        printf "GITHUB - NEW Version available [$1 - $VERS] !\n"
         if [ "$INFORM" == "" ]; then
             printf "$1\n$TRN\n$NAME\n$TRN\n$BODY\n$TRN\n"
         fi
         if [ ! "$INFORM" == "" ]; then
-            send_email "$INFORM" "GITHUB - NEW Version available [$1] !\n" "$BODY"
+            send_email "$INFORM" "GITHUB - NEW Version available [$1 - $VERS] !\n" "$BODY"
         fi
         if [ ! "$INFORMCC" == "" ]; then
-            send_email "$INFORMCC" "GITHUB - NEW Version available [$1] !\n" "$BODY"
+            send_email "$INFORMCC" "GITHUB - NEW Version available [$1 - $VERS] !\n" "$BODY"
         fi
     else
         printf "$1 - $VERS\nNothing new...\n"
