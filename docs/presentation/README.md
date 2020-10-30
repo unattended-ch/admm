@@ -15,3 +15,8 @@
 
 [admm-install-en.mp4](admm-install-en.mp4)	- Installation of admm
 
+<video width="320" height="240" controls>
+  <source src="admm-install-en.mp4" type="video/mp4">
+ 
+Your browser does not support the video tag.
+</video>
