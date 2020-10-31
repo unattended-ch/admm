@@ -321,8 +321,7 @@ git_version() {
 git_ver() {
     curl --silent "https://api.github.com/repos/$1/releases/latest" -o $(pwd)/latest  # Get latest release from GitHub api
     VERS=$(cat $(pwd)/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')             # Pluck JSON value
-    #NAME=$(cat $(pwd)/latest | grep -m 1 '"name":' | sed -E 's/.*"([^"]+)".*/\1/')
-    #echo "$NAME $VERS"
+    rm -f $(pwd)/latest
 }
 
 #----------------------------------------------------------------------
