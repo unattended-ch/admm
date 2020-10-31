@@ -1,7 +1,7 @@
 #!/bin/bash
 #----------------------------------------------------------------------
 # Description: Internal functions for admm menu scripts
-# Author: Automatix <automatix@unattended.ch>
+# Author: Automatix <github@unattended.ch>
 # Created at: Sat Oct 31 00:55:09 UTC 2020
 #
 # (c) 2020 Automatix  All rights reserved.
@@ -272,7 +272,7 @@ send_email() {
 #----------------------------------------------------------------------
 read_last_date() {
     PAC="$(basename $1)"
-    DT=$(cat $2 | grep $PAC | cut -d '=' -f 2)
+    DT=$(cat $2 | grep ^$PAC | cut -d '=' -f 2)
     if [ ! "$DT" == "" ]; then
         export LAST=$DT
     else
@@ -290,7 +290,7 @@ read_last_date() {
 #----------------------------------------------------------------------
 git_update_log() {
     PAC="$(basename $1)"
-    FOUND=$(cat $2 | grep $PAC)
+    FOUND=$(cat $2 | grep -m1 "^${PAC}")
     REPL="s/$FOUND/$PAC=$3/g"
     HEADER "$PAC [$FOUND]"
     if [ ! "$FOUND" == "" ]; then
