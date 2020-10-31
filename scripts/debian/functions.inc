@@ -460,3 +460,22 @@ coin_price() {
     done
     echo "--------------------------------"
 }
+
+#----------------------------------------------------------------------
+# Function    : read_input [message] [default]
+# Description : Display a message and wait for key input
+# Parameters  : [message] Message to display "$MSG [$DEF] : "
+#               [default] Default value
+#----------------------------------------------------------------------
+read_input() {
+    MSG=$1
+    DEF=$2
+    if [ "$MSG" == "" ]; then
+        MSG=""
+    fi
+    printf "$MSG [$DEF] : "
+    read INPUT
+    if [ "$INPUT" == "" ]; then
+        INPUT=$DEF
+    fi
+}
