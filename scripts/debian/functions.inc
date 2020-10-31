@@ -349,17 +349,29 @@ git_latest() {
     rm -f $(pwd)/latest
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : is_mounted [folder]
+# Description : Check if [folder] is mounted and return value in $MOUNTED
+# Parameters  : [folder] Folder to check
+#----------------------------------------------------------------------
 is_mounted() {
     export MOUNTED="$(mount | grep $1)"
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : get_network_device
+# Description : Get list of network device
+# Parameters  : none
+#----------------------------------------------------------------------
 get_network_device() {
     export ETHER=$(sudo ifconfig | grep -E "bond|eth|en" | head -n1 | awk '{print $1}' | tr ":" " ")
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : purge_files [folder/filename.ext]
+# Description : Purge give files and let only latest version
+# Parameters  : [folder/filename.ext] Wildcards are allowed
+#----------------------------------------------------------------------
 purge_files() {
     if [ ! "$1" == "" ]; then
         LIST=$(ls $1 | sort -r | tail -n +2)
@@ -371,7 +383,11 @@ purge_files() {
     fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : mysql_exec_root [sqlquery]
+# Description : Execute mysql query as root
+# Parameters  : [sqlquery]
+#----------------------------------------------------------------------
 mysql_exec_root() {
     if [ "$STATS" == "" ]; then
         STATS=localhost
@@ -383,7 +399,11 @@ EOF
     fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : mysql_exec [sqlquery]
+# Description : Execute mysql query
+# Parameters  : [sqlquery]
+#----------------------------------------------------------------------
 mysql_exec() {
     if [ "$STATS" == "" ]; then
         STATS=localhost
@@ -395,7 +415,11 @@ EOF
     fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : stats_check_text
+# Description : 
+# Parameters  : 
+#----------------------------------------------------------------------
 stats_check_text() {
     stats_text $1
     if [ "$TEXTID" == "" ]; then
@@ -408,7 +432,11 @@ stats_check_text() {
     fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : stats_text
+# Description : 
+# Parameters  : 
+#----------------------------------------------------------------------
 stats_text() {
     if [ ! "$1" == "" ]; then
         stats_text="$(cat $PLG/template/admm-text.tmpl)"
@@ -419,7 +447,11 @@ stats_text() {
     fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : stats_add_user
+# Description : 
+# Parameters  : 
+#----------------------------------------------------------------------
 stats_add_user() {
     stats_check_user="$(cat $PLG/template/admm-checkuser.tmpl)"
     FOUND=$(mysql_exec_root "$stats_check_user")
@@ -439,7 +471,11 @@ stats_add_user() {
     fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : stats_check_database
+# Description : 
+# Parameters  : 
+#----------------------------------------------------------------------
 stats_check_database() {
     stats_check_database="$(cat $PLG/template/admm-base.tmpl)"
     #echo "$stats_check_database"
@@ -451,7 +487,11 @@ stats_check_database() {
     fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : stats_check_host
+# Description : 
+# Parameters  : 
+#----------------------------------------------------------------------
 stats_check_host() {
     #stats_check_database
     stats_host
@@ -465,7 +505,11 @@ stats_check_host() {
     fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : stats_host
+# Description : 
+# Parameters  : 
+#----------------------------------------------------------------------
 stats_host() {
     CONTENT="$(cat $PLG/template/admm-host.tmpl)"
     CONTENT=${CONTENT/(HOST)/$(hostname)}
@@ -671,7 +715,12 @@ stats_sensors() {
     fi
 }
 
-#------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Function    : coin_price [coin] [currency]
+# Description : Get crypto coin price from coingecko.com
+# Parameters  : [coin]     Name of the coin
+#               [currency] Currency
+#----------------------------------------------------------------------
 coin_price() {
     if [ ! "$1" == "" ]; then
         COIN="$1"
