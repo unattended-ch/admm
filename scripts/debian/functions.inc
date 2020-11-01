@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bashF
 #----------------------------------------------------------------------
 # Description: Internal functions for admm menu scripts
 # Author: Automatix <github@unattended.ch>
@@ -392,76 +392,6 @@ purge_files() {
 }
 
 #----------------------------------------------------------------------
-# Function    : mysql_exec_root [sqlquery]
-# Description : Execute mysql query as root
-# Parameters  : [sqlquery]
-#----------------------------------------------------------------------
-mysql_exec_root() {
-    if [ "$STATS" == "" ]; then
-        STATS=localhost
-    fi
-    if [ ! "$1" == "" ]; then
-mysql --host=$STATS --user=root --password=$PAS admm  << EOF
-$1
-EOF
-    fi
-}
-
-#----------------------------------------------------------------------
-# Function    : mysql_exec [sqlquery]
-# Description : Execute mysql query
-# Parameters  : [sqlquery]
-#----------------------------------------------------------------------
-mysql_exec() {
-    if [ "$STATS" == "" ]; then
-        STATS=localhost
-    fi
-    if [ ! "$1" == "" ]; then
-mysql --host=$STATS --user=support --password=$PAS admm  << EOF
-$1
-EOF
-    fi
-}
-
-#----------------------------------------------------------------------
-# Function    : coin_price [coin] [currency]
-# Description : Get crypto coin price from coingecko.com
-# Parameters  : [coin]     Name of the coin
-#               [currency] Currency
-#----------------------------------------------------------------------
-coin_price() {
-    if [ ! "$1" == "" ]; then
-        COIN="$1"
-    else
-        COIN=bitcoin
-    fi
-    if [ ! "$2" == "" ]; then
-        CURR="$2"
-    else
-        CURR=chf
-    fi
-    URL="https://api.coingecko.com/api/v3/simple/price?ids=$COIN&vs_currencies=$CURR"
-    RES=$(curl --silent $URL)
-    RES=${RES//-/}
-    #echo "$RES"
-    COIN=${COIN//,/ }
-    COIN=${COIN//-/}
-    CURR=${CURR//,/ }
-    #echo "$COIN"
-    #echo "$RES" | jq '.'
-    for CUR in $CURR; do
-        for VAR in $COIN; do
-            echo "--------------------------------"
-            NAME=.$VAR.$CUR
-            #echo "$NAME"
-            PRICE=$(echo "$RES" | jq $NAME)
-            echo "$VAR = $PRICE $CUR"
-        done
-    done
-    echo "--------------------------------"
-}
-
-#----------------------------------------------------------------------
 # Function    : read_input [message] [default]
 # Description : Display a message and wait for key input
 # Parameters  : [message] Message to display "$MSG [$DEF] : "
@@ -477,5 +407,18 @@ read_input() {
     read INPUT
     if [ "$INPUT" == "" ]; then
         INPUT=$DEF
+    fi
+}
+
+#----------------------------------------------------------------------
+# Function    : log [file] [msg]
+# Description : Add entry to log file
+# Parameters  : [file] Log file name
+#               [msg]  Message to add
+#----------------------------------------------------------------------
+log() {
+    if [ ! "$1" == "" ]; then
+        DT=$(date +%Y.%m.%d %H:%M:%s)
+        printf "%s : %s" "$DT" "$2" | tee -a $1
     fi
 }
