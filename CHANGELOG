@@ -30,3 +30,4 @@
 		Function key description shortned
 2.0.0.35	Ubuntu 20 Version
 2.0.0.36	Check if tokenizer count in .mnu files is even
+2.0.0.37	Handle .inc files as shell scripts
