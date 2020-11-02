@@ -9,6 +9,7 @@
 #
 TRN="-------------------------------------------------------------------------------"
 export GPG_TTY=$(tty)
+export DISPLAY=:0.0
 #----------------------------------------------------------------------
 # Function    : pushd [folder]
 # Description : Remove messages from pushd
@@ -25,6 +26,19 @@ pushd() {
 #----------------------------------------------------------------------
 popd() {
 	command popd "$@" > /dev/null
+}
+
+#----------------------------------------------------------------------
+# Function    : INFO [message]
+# Description : Display info message if $DEBUG=1
+# Parameters  : [message] Message to display
+#----------------------------------------------------------------------
+INFO() {
+    if [ "$DEBUG" == "1" ]; then
+        #MSG=$(echo "$1" | more)
+        MSG=$1
+        printf "%s\n%s\n%s\n" "$TRN" "$MSG" "$TRN"
+    fi
 }
 
 #----------------------------------------------------------------------
@@ -382,7 +396,8 @@ get_network_device() {
 #----------------------------------------------------------------------
 purge_files() {
     if [ ! "$1" == "" ]; then
-        LIST=$(ls $1 | sort -r | tail -n +2)
+        LIST=$(ls $1 2>/dev/null | sort -r | tail -n +2)
+        INFO "$LIST"
         if [ ! "$LIST" == "" ]; then
             for VAR in $LIST; do
                 sudo rm -vf $VAR

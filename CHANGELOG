@@ -31,3 +31,4 @@
 2.0.0.35	Ubuntu 20 Version
 2.0.0.36	Check if tokenizer count in .mnu files is even
 2.0.0.37	Handle .inc files as shell scripts
+2.0.0.38	Block F1, F5 and F6 if $EDITOR or $VIEWER is found in menu command
