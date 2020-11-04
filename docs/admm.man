@@ -137,11 +137,15 @@ F10- Exit
 .br
 SF1- Display admm.man
 .br
-SF2- Run mc in /usr/local/share/admm
+SF2- Run mc in the menu file folder
 .br
-SF3- Edit admm.conf
+SF3- Edit admm.conf (admm configuration)
+.br
+SF5- Edit functions.inc (global menu functions)
 .br
 SF7- Display output.log
+.br
+SF8- Execute admm-scripts.sh to export scripts to the server
 .br
 SF9- Display changes.log
 .br

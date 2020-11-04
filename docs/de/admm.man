@@ -151,15 +151,19 @@ F9 \- admm.log Anzeigen
 .br
 F10\- Beenden
 .br
-SF1\- Display admm.man
+SF1\- admm.man Anzeigen
 .br
-SF2\- Run mc in /usr/local/share/admm
+SF2\- Run mc in the menu file folder
 .br
-SF3\- Edit admm.conf
+SF3\- Bearbeite index.conf (Globale Menü Konfiguration)
 .br
-SF7\- Display output.log
+SF5\- Bearbeite functions.inc (Globale Menü Funktionen)
 .br
-SF9\- Display changes.log
+SF7\- output.log Anzeigen
+.br
+SF8\- admm\-scripts.sh ausführen zum exportieren der scripts auf den server
+.br
+SF9\- changes.log Anzeigen
 .br
 	
 .SH "NAVIGATIONS TASTEN"

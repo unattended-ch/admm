@@ -32,3 +32,6 @@
 2.0.0.36	Check if tokenizer count in .mnu files is even
 2.0.0.37	Handle .inc files as shell scripts
 2.0.0.38	Block F1, F5 and F6 if $EDITOR or $VIEWER is found in menu command
+2.0.0.39	SF2 open mc in menu folder, SF5 open functions.inc, SF8 execute admm-script.sh
+		git_ver() modified to read Github version of package with jq
+		Do not show press_any_key when mc is executed

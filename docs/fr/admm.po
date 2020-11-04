@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-10-26 20:37+0000\n"
+"POT-Creation-Date: 2020-11-04 12:38+0000\n"
 "PO-Revision-Date: 2020-05-04 17:05+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -387,616 +387,626 @@ msgstr ""
 
 #. type: Plain text
 #: admm.man:141
-msgid "SF2- Run mc in /usr/local/share/admm"
+msgid "SF2- Run mc in the menu file folder"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:143
-msgid "SF3- Edit admm.conf"
+msgid "SF3- Edit admm.conf (admm configuration)"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:145
-msgid "SF7- Display output.log"
+msgid "SF5- Edit functions.inc (global menu functions)"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:147
+msgid "SF7- Display output.log"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:149
+msgid "SF8- Execute admm-scripts.sh to export scripts to the server"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:151
 msgid "SF9- Display changes.log"
 msgstr ""
 
 #. type: SH
-#: admm.man:149
+#: admm.man:153
 #, no-wrap
 msgid "NAVIGATION KEYS"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:151
+#: admm.man:155
 msgid "UP-/DOWN-Arrow\t- Select Menu position"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:153
+#: admm.man:157
 msgid "RIGHT-Arrow\t- Open Submenu (not Shell scripts)"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:155
+#: admm.man:159
 msgid "LEFT-Arrow\t- Exit from Menu or Submenu"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:157
+#: admm.man:161
 msgid "SPACE\t\t- Exit from Menu or Submenu"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:159
+#: admm.man:163
 msgid "ENTER\t\t- Execute selected Menu position"
 msgstr ""
 
 #. type: SH
-#: admm.man:161
+#: admm.man:165
 #, no-wrap
 msgid "MOUSE KEYS"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:163
+#: admm.man:167
 msgid ""
 "LEFT\t\t\t- Select a button by click, double-click to execute the command"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:165
+#: admm.man:169
 msgid "RIGHT\t\t- Select a button by click, double-click to edit the file"
 msgstr ""
 
 #. type: SH
-#: admm.man:167
+#: admm.man:171
 #, no-wrap
 msgid "CONFIGURATION admm.conf"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:169 admm.man:208
+#: admm.man:173 admm.man:212
 msgid "[Setup]"
-msgstr ""
-
-#. type: Plain text
-#: admm.man:171
-#, no-wrap
-msgid "    Debug=1\t\t\t\t\t\tDebug mode 0=OFF 1=MIN 2=FILE 3=EVENT 4=FUNC 5=DATA 6=KEY 8=SCAN 9=ALL\n"
-msgstr ""
-
-#. type: Plain text
-#: admm.man:173
-#, no-wrap
-msgid "    Home=.\t\t\t\t\t\tHome folder\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:175
 #, no-wrap
-msgid "    Index=scripts/debian/index.mnu\t\tMain menu file to load\n"
+msgid "    Debug=1\t\t\t\t\t\tDebug mode 0=OFF 1=MIN 2=FILE 3=EVENT 4=FUNC 5=DATA 6=KEY 8=SCAN 9=ALL\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:177
 #, no-wrap
-msgid "    SpaceLine=0\t\t\t\t\tSpaces between menu lines\n"
+msgid "    Home=.\t\t\t\t\t\tHome folder\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:179
 #, no-wrap
-msgid "    Background=2\t\t\t\t\tBackground mode 0=OFF 1=BRICKS 2=TEXT\n"
+msgid "    Index=scripts/debian/index.mnu\t\tMain menu file to load\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:181
 #, no-wrap
-msgid "    ConsoleX=80\t\t\t\t\tConsole chars per line\n"
+msgid "    SpaceLine=0\t\t\t\t\tSpaces between menu lines\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:183
 #, no-wrap
-msgid "    ConsoleY=25\t\t\t\t\tConsole Lines per screen\n"
+msgid "    Background=2\t\t\t\t\tBackground mode 0=OFF 1=BRICKS 2=TEXT\n"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:185
+#, no-wrap
+msgid "    ConsoleX=80\t\t\t\t\tConsole chars per line\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:187
+#, no-wrap
+msgid "    ConsoleY=25\t\t\t\t\tConsole Lines per screen\n"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:191
 msgid "[Editor]"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:189
+#: admm.man:193
 #, no-wrap
 msgid "    Editor=mcedit\t\t\t\t\tDefault editor\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:191
+#: admm.man:195
 #, no-wrap
 msgid "    Viewer=mcview\t\t\t\t\tDefault viewer\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:195
-msgid "[Colors]"
-msgstr ""
-
-#. type: Plain text
-#: admm.man:197
-#, no-wrap
-msgid "    Background=7\t\t\t\t\tBackground color\n"
-msgstr ""
-
-#. type: Plain text
 #: admm.man:199
-#, no-wrap
-msgid "    ButtonBackground=7\t\t\t\tButton background color\n"
+msgid "[Colors]"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:201
 #, no-wrap
-msgid "    Button=6\t\t\t\t\t\tButton color\n"
+msgid "    Background=7\t\t\t\t\tBackground color\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:203
 #, no-wrap
+msgid "    ButtonBackground=7\t\t\t\tButton background color\n"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:205
+#, no-wrap
+msgid "    Button=6\t\t\t\t\t\tButton color\n"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:207
+#, no-wrap
 msgid "    ButtonKey=4\t\t\t\t\tButton key color\n"
 msgstr ""
 
 #. type: SH
-#: admm.man:205
+#: admm.man:209
 #, no-wrap
 msgid "CONFIGURATION index.conf"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:210
+#: admm.man:214
 #, no-wrap
 msgid "    Version=\t\t\t\t\tMenu file version (I<Incremented after editing a file and stored in $VER>)\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:212
+#: admm.man:216
 #, no-wrap
 msgid "    Password=\t\t\t\t\tOne time password will be saved crypted as Encrypted= (I<do not use spaces>)\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:214
+#: admm.man:218
 #, no-wrap
 msgid "    Encrypted=\t\t\t\t\tCrypted password after first run\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:218
-msgid "[Global]\t\t\t\t\t\tGlobal variables for script and menu files."
-msgstr ""
-
-#. type: Plain text
-#: admm.man:220
-#, no-wrap
-msgid "    MASTER=localhost\n"
-msgstr ""
-
-#. type: Plain text
 #: admm.man:222
-#, no-wrap
-msgid "    DOMAIN=my.lan\n"
+msgid "[Global]\t\t\t\t\t\tGlobal variables for script and menu files."
 msgstr ""
 
 #. type: Plain text
 #: admm.man:224
 #, no-wrap
-msgid "    INFORM=name@$DOMAIN\n"
+msgid "    MASTER=localhost\n"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:226
+#, no-wrap
+msgid "    DOMAIN=my.lan\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:228
-msgid "[Commands]\t\t\t\t\tFormat : -cmd=\"Hotkeys\"=Comment"
-msgstr ""
-
-#. type: Plain text
-#: admm.man:230
 #, no-wrap
-msgid "    -u=\"U  \"=Upgrade available new packages\n"
+msgid "    INFORM=name@$DOMAIN\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:232
-#, no-wrap
-msgid "    -a=\"A  \"=Autoremove old packages\n"
+msgid "[Commands]\t\t\t\t\tFormat : -cmd=\"Hotkeys\"=Comment"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:234
 #, no-wrap
-msgid "    -c=\"aC   \"=Cleanup log files fo admm\n"
+msgid "    -u=\"U  \"=Upgrade available new packages\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:236
 #, no-wrap
-msgid "    -ru=\"RU   \"=Remote Upgrade available new packages on all node in $BACKUP\n"
+msgid "    -a=\"A  \"=Autoremove old packages\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:238
 #, no-wrap
-msgid "    -ra=\"RA   \"=Autoremove old packages on all node in $BACKUP\n"
+msgid "    -c=\"aC   \"=Cleanup log files fo admm\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:240
 #, no-wrap
-msgid "    -rdm=\"RD0    \"=Start rdesktop with node 0\n"
+msgid "    -ru=\"RU   \"=Remote Upgrade available new packages on all node in $BACKUP\n"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:242
+#, no-wrap
+msgid "    -ra=\"RA   \"=Autoremove old packages on all node in $BACKUP\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:244
+#, no-wrap
+msgid "    -rdm=\"RD0    \"=Start rdesktop with node 0\n"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:248
 msgid ""
 "[Keys]\t\t\t\t\t\tMenu short keys filter character definition (I<Subsection "
 "also needed !>)"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:246
+#: admm.man:250
 #, no-wrap
 msgid "    Master=!\t\t\t\t\tAdd !MENU to only see the link on this hosts\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:250
+#: admm.man:254
 msgid ""
 "[Master]\t\t\t\t\t\tMenu short key hostname sections for filter (I<only "
 "hostname not FQDN>)"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:252
+#: admm.man:256
 #, no-wrap
 msgid "    localhost=1\n"
 msgstr ""
 
 #. type: SH
-#: admm.man:254
+#: admm.man:258
 #, no-wrap
 msgid "CONFIGURATION index.mnu"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:256
+#: admm.man:260
 msgid "Available command are :"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:260
+#: admm.man:264
 msgid "  B<HEADER> \"Menu title\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:262
+#: admm.man:266
 msgid ""
 "  B<MENU> \"Hotkey\" \"Command title\" \"/menu/or/script\" \"/directory/for/"
 "menu/or/script\" \"Parameters\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:264
+#: admm.man:268
 msgid "  B<MENU_>"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:268
+#: admm.man:272
 msgid "Predefined variables are :"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:272
+#: admm.man:276
 msgid "  B<$PWD> = admmm home directory (default: /usr/local/share/admm)"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:274
+#: admm.man:278
 msgid "  B<$SWD> = Submenu or Script work directory"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:276
+#: admm.man:280
 msgid "  B<$VER> = Menu version (automatically incremented on edit a file)"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:278
+#: admm.man:282
 msgid "  B<$NOD> = Hostname of executing computer"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:282
+#: admm.man:286
 msgid "Example index.mnu :"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:284
+#: admm.man:288
 msgid "  HEADER \"Main Menu [$VER]\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:286
+#: admm.man:290
 msgid ""
 "  MENU \"m\" \"Maintenance Menu\" \"$PWD/install/maintain.mnu\" \"$PWD\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:288
+#: admm.man:292
 msgid ""
 "  MENU \"i\" \"Installation Menu\" \"$PWD/install/install.mnu\" \"$PWD/"
 "install\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:290
+#: admm.man:294
 msgid "  MENU_"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:292
+#: admm.man:296
 msgid ""
 "  MENU \"d\" \"Mount / Unmount Device\" \"$PWD/usb/mount.mnu\" \"$PWD/usb\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:294
+#: admm.man:298
 msgid ""
 "  MENU \"b\" \"admm Self Backup\" \"$PWD/config/backup.sh\" \"$PWD/config\""
 msgstr ""
 
 #. type: SH
-#: admm.man:296
+#: admm.man:300
 #, no-wrap
 msgid "CONFIGURATION mnu.tmpl"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:298
+#: admm.man:302
 msgid "HEADER \"{HEADER}\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:300
+#: admm.man:304
 msgid "MENU \"1\" \" 1. {TITLE} Install\" \"{PATH}/install.sh\" \"{PATH}\""
 msgstr ""
 
 #. type: SH
-#: admm.man:302
+#: admm.man:306
 #, no-wrap
 msgid "CONFIGURATION sh.tmpl"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:304 admm.man:396
+#: admm.man:308 admm.man:400
 msgid "#!/bin/bash"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:308
+#: admm.man:312
 msgid "PWD=$(pwd)"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:310
+#: admm.man:314
 msgid "DST=~"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:312
+#: admm.man:316
 msgid "if [ ! \"$1\" == \"\" ]; then"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:314
+#: admm.man:318
 #, no-wrap
 msgid "    PWD=$1\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:316
+#: admm.man:320
 msgid "fi"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:318
+#: admm.man:322
 msgid "HEADER \"{TITLE}\""
 msgstr ""
 
 #. type: SH
-#: admm.man:320
+#: admm.man:324
 #, no-wrap
 msgid "CONFIGURATION email.tmpl"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:322
+#: admm.man:326
 msgid "To: (TO)"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:324
+#: admm.man:328
 msgid "Subject: (SUB)"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:326
+#: admm.man:330
 msgid "MIME-Version: 1.0"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:328
+#: admm.man:332
 msgid "Content-Type: multipart/mixed; boundary=\"-\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:332 admm.man:342
+#: admm.man:336 admm.man:346
 msgid "---"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:334
+#: admm.man:338
 msgid "Content-Type: text/plain; charset=US-ASCII"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:338
+#: admm.man:342
 msgid "(BODY)"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:344
+#: admm.man:348
 msgid ""
 "Content-Type: application/octet-stream; charset=US-ASCII; name=\"(NAME)\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:346
+#: admm.man:350
 msgid "Content-Transfer-Encoding: BASE64"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:348
+#: admm.man:352
 msgid "Content-Disposition: attachment; filename=\"(NAME)\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:352
+#: admm.man:356
 msgid "(ATTACH)"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:354
+#: admm.man:358
 msgid "-----"
 msgstr ""
 
 #. type: SH
-#: admm.man:356
+#: admm.man:360
 #, no-wrap
 msgid "CONFIGURATION man.tmpl"
 msgstr ""
 
 #.  Manpage for {NAME}
 #. type: Plain text
-#: admm.man:358
+#: admm.man:362
 msgid "."
 msgstr ""
 
 #. type: Plain text
-#: admm.man:360
+#: admm.man:364
 msgid ".TH man 1 {TITLE}"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:362
-msgid ".SH NAME"
-msgstr ""
-
-#. type: Plain text
-#: admm.man:364
-#, no-wrap
-msgid "    {NAME}\n"
-msgstr ""
-
-#. type: Plain text
 #: admm.man:366
-msgid ".SH DESCRIPTION"
+msgid ".SH NAME"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:368
 #, no-wrap
-msgid "    {DESCRIPTION}\n"
+msgid "    {NAME}\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:370
-msgid ".SH SYNOPSIS"
+msgid ".SH DESCRIPTION"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:372
 #, no-wrap
-msgid "    {SYNOPSIS}\n"
+msgid "    {DESCRIPTION}\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:374
-msgid ".SH FILES"
+msgid ".SH SYNOPSIS"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:376
 #, no-wrap
-msgid "    {FILES}\n"
+msgid "    {SYNOPSIS}\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:378
-msgid ".SH EXAMPLE"
+msgid ".SH FILES"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:380
 #, no-wrap
-msgid "    {EXAMPLE}\n"
+msgid "    {FILES}\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:382
-msgid ".SH SEE ALSO"
+msgid ".SH EXAMPLE"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:384
 #, no-wrap
-msgid "    admm(8) \n"
+msgid "    {EXAMPLE}\n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:386
-msgid ".SH BUGS"
+msgid ".SH SEE ALSO"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:388
 #, no-wrap
-msgid "    {BUGS}\n"
+msgid "    admm(8) \n"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:390
-msgid ".SH AUTHOR"
+msgid ".SH BUGS"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:392
 #, no-wrap
+msgid "    {BUGS}\n"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:394
+msgid ".SH AUTHOR"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:396
+#, no-wrap
 msgid "    admm (automatix@unattended.ch)\n"
 msgstr ""
 
 #. type: SH
-#: admm.man:394
+#: admm.man:398
 #, no-wrap
 msgid "CONFIGURATION functions.inc"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:398
+#: admm.man:402
 msgid ""
 "TRN="
 "\"-------------------------------------------------------------------------------"
@@ -1004,237 +1014,237 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:400
+#: admm.man:404
 msgid "pushd() {"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:402
+#: admm.man:406
 msgid "  command pushd \"$@\" E<gt> /dev/null"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:404 admm.man:413 admm.man:422 admm.man:430 admm.man:447
-#: admm.man:470 admm.man:489 admm.man:498 admm.man:515 admm.man:530
-#: admm.man:549
+#: admm.man:408 admm.man:417 admm.man:426 admm.man:434 admm.man:451
+#: admm.man:474 admm.man:493 admm.man:502 admm.man:519 admm.man:534
+#: admm.man:553
 msgid "}"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:407 admm.man:416 admm.man:424 admm.man:433 admm.man:450
-#: admm.man:473 admm.man:492 admm.man:501 admm.man:518 admm.man:533
+#: admm.man:411 admm.man:420 admm.man:428 admm.man:437 admm.man:454
+#: admm.man:477 admm.man:496 admm.man:505 admm.man:522 admm.man:537
 msgid "#------------------------------------------------------------------------------------------"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:409
+#: admm.man:413
 msgid "popd() {"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:411
+#: admm.man:415
 msgid "  command popd \"$@\" E<gt> /dev/null"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:418
+#: admm.man:422
 msgid "HEADER() {"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:420
+#: admm.man:424
 msgid "  printf \"%s\\n%s\\n%s\\n\" \"$TRN\" \"--- $1\" \"$TRN\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:426
+#: admm.man:430
 msgid "finish() {"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:428
+#: admm.man:432
 msgid "  HEADER \"Finished\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:435
+#: admm.man:439
 msgid "folder_exists_old() {"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:437
+#: admm.man:441
 msgid "  if [ -d \"$1\" ]; then"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:439
+#: admm.man:443
 msgid "  DT=$(date +%Y%m%d_%H%M)"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:441
+#: admm.man:445
 msgid "  echo \"Move folder [$1] to [$1_$DT]\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:443
+#: admm.man:447
 msgid "  mv $1 $1_$DT"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:445 admm.man:513 admm.man:528 admm.man:547
+#: admm.man:449 admm.man:517 admm.man:532 admm.man:551
 msgid "  fi"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:452
+#: admm.man:456
 msgid "press_any_key() {"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:454
+#: admm.man:458
 #, no-wrap
 msgid "    printf \"\\nPress any key to continue\\n\"\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:456 admm.man:477
+#: admm.man:460 admm.man:481
 #, no-wrap
 msgid "    while [ true ] ; do\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:458 admm.man:479
+#: admm.man:462 admm.man:483
 #, no-wrap
 msgid "      read -t 3 -n 1\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:460 admm.man:481
+#: admm.man:464 admm.man:485
 #, no-wrap
 msgid "      if [ $? = 0 ] ; then\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:462
+#: admm.man:466
 #, no-wrap
 msgid "        #clear\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:464 admm.man:483
+#: admm.man:468 admm.man:487
 #, no-wrap
 msgid "        exit 0\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:466 admm.man:485
+#: admm.man:470 admm.man:489
 #, no-wrap
 msgid "      fi\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:468 admm.man:487
+#: admm.man:472 admm.man:491
 #, no-wrap
 msgid "    done\n"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:475
+#: admm.man:479
 msgid "wait_any_key() {"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:494
+#: admm.man:498
 msgid "intro() {"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:496
+#: admm.man:500
 msgid "  HEADER \"ADMin Menu (c) unattended.ch\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:503
+#: admm.man:507
 msgid "onlymsg() {"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:505 admm.man:522 admm.man:537
+#: admm.man:509 admm.man:526 admm.man:541
 msgid "  if [ $? -gt 0 ]; then"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:507 admm.man:524 admm.man:539
+#: admm.man:511 admm.man:528 admm.man:543
 msgid "  echo \"ERROR : $1\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:509 admm.man:543
+#: admm.man:513 admm.man:547
 msgid "  else"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:511 admm.man:545
+#: admm.man:515 admm.man:549
 msgid "  echo \"DONE\""
 msgstr ""
 
 #. type: Plain text
-#: admm.man:520
+#: admm.man:524
 msgid "errmsg() {"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:526 admm.man:541
+#: admm.man:530 admm.man:545
 msgid "  exit $?"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:535
+#: admm.man:539
 msgid "retval() {"
-msgstr ""
-
-#. type: SH
-#: admm.man:551
-#, no-wrap
-msgid "EXAMPLE"
-msgstr ""
-
-#. type: Plain text
-#: admm.man:553
-msgid ""
-"Look at /usr/local/share/admm/scripts for index.mnu and index.conf example."
 msgstr ""
 
 #. type: SH
 #: admm.man:555
 #, no-wrap
-msgid "SEE ALSO"
+msgid "EXAMPLE"
 msgstr ""
 
 #. type: Plain text
 #: admm.man:557
+msgid ""
+"Look at /usr/local/share/admm/scripts for index.mnu and index.conf example."
+msgstr ""
+
+#. type: SH
+#: admm.man:559
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: admm.man:561
 msgid "admm(8)"
 msgstr ""
 
 #. type: SH
-#: admm.man:557
+#: admm.man:561
 #, no-wrap
 msgid "BUGS"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:559
+#: admm.man:563
 msgid "No known bugs."
 msgstr ""
 
 #. type: SH
-#: admm.man:559
+#: admm.man:563
 #, no-wrap
 msgid "AUTHOR"
 msgstr ""
 
 #. type: Plain text
-#: admm.man:560
+#: admm.man:564
 msgid "Automatix (github@unattended.ch)"
 msgstr ""

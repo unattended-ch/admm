@@ -89,9 +89,10 @@
        F9 - Display admm.log
        F10- Exit
        SF1- Display admm.man
-       SF2- Run mc in /usr/local/share/admm
+       SF2- Run mc in folder wher menu file is located
        SF3- Edit admm.conf
        SF7- Display ouput.log
+       SF8- Run admm-scripts.sh for export to server
        SF9- Display changes.log
 
 ### NAVIGATION KEYS

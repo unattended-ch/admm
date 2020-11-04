@@ -1,4 +1,4 @@
-#!/bin/bashF
+#!/bin/bash
 #----------------------------------------------------------------------
 # Description: Internal functions for admm menu scripts
 # Author: Automatix <github@unattended.ch>
@@ -285,7 +285,8 @@ send_email() {
 #               [logfile]    Logfile name
 #----------------------------------------------------------------------
 read_last_date() {
-    PAC="$(basename $1)"
+    #PAC="$(basename $1)"
+    PAC=$(echo $1 | sed 's/\//_/g')
     DT=$(cat $2 | grep ^$PAC | cut -d '=' -f 2)
     if [ ! "$DT" == "" ]; then
         export LAST=$DT
@@ -303,13 +304,13 @@ read_last_date() {
 #               [version]    New version found
 #----------------------------------------------------------------------
 git_update_log() {
-    PAC="$(basename $1)"
+    #PAC="$(basename $1)"
+    PAC=$(echo $1 | sed 's/\//_/g')
     FOUND=$(cat $2 | grep -m1 "^${PAC}")
     REPL="s/$FOUND/$PAC=$3/g"
-    HEADER "$PAC [$FOUND]"
+    #HEADER "$PAC [$FOUND]"
     if [ ! "$FOUND" == "" ]; then
         sed -i $REPL $2
-        #sed -i '/$PAC=$LAST/c\/' $2
     else
         echo "$PAC=$3" >> $2
     fi
@@ -333,8 +334,16 @@ git_version() {
 # Parameters  : [repo name]  Name of repository
 #----------------------------------------------------------------------
 git_ver() {
-    curl --silent "https://api.github.com/repos/$1/releases/latest" -o $(pwd)/latest  # Get latest release from GitHub api
-    VERS=$(cat $(pwd)/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')             # Pluck JSON value
+    if [ ! -f "$(pwd)/latest" ]; then
+        curl --silent "https://api.github.com/repos/$1/releases/latest" -o $(pwd)/latest  # Get latest release from GitHub api
+    fi
+    VERS=$(cat $(pwd)/latest | jq '.tag_name' | sed 's/\"//g' | sed 's/v//g')
+    #NAME=$(cat $(pwd)/latest | jq '.name' | sed 's/\"//g')
+    BODY=$(cat $(pwd)/latest | jq '.body' | sed 's/\"//g')
+    PUBL=$(cat $(pwd)/latest | jq '.published_at' | sed 's/\"//g' | sed 's/[T|Z]/ /g')
+    if [ "$NAME" == ": " ]; then
+        NAME=$1
+    fi
     rm -f $(pwd)/latest
 }
 
@@ -343,30 +352,33 @@ git_ver() {
 # Description : Get latest version of github repository
 #               Send email if new version is available
 # Parameters  : [repo name]  Name of repository
-#               [logfile]    Logfile name
+#               [logfile]    Logfile name for version storage
 #----------------------------------------------------------------------
 git_latest() {
-    curl --silent "https://api.github.com/repos/$1/releases/latest" -o $(pwd)/latest  # Get latest release from GitHub api
-    VERS=$(cat $(pwd)/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')             # Pluck JSON value
-    BODY=$(cat $(pwd)/latest | grep '"body":' | sed -E 's/.*"([^"]+)".*/\1/')
-    NAME=$(cat $(pwd)/latest | grep -m 1 '"name":' | sed -E 's/.*"([^"]+)".*/\1/')
-    if [ "$NAME" == ": " ]; then
-        NAME=$VERS
+    if [ ! -f "$(pwd)/latest" ]; then
+        curl --silent "https://api.github.com/repos/$1/releases/latest" -o $(pwd)/latest  # Get latest release from GitHub api
+    fi
+    VERS=$(cat $(pwd)/latest | jq '.tag_name' | sed 's/\"//g' | sed 's/v//g')
+    #NAME=$(cat $(pwd)/latest | jq '.name' | sed 's/\"//g')
+    BODY=$(cat $(pwd)/latest | jq '.body' | sed 's/\"//g')
+    PUBL=$(cat $(pwd)/latest | jq '.published_at' | sed 's/\"//g' | sed 's/[T|Z]/ /g')
+    if [ "$NAME" == "" ]; then
+        NAME=$1
     fi
     git_version $1 $2 "$VERS"
     if [ ! "$VERS" == "$LAST" ]; then
-        printf "GITHUB - NEW Version available [$1 - $VERS] !\n"
+        printf "GITHUB - NEW Version available [$NAME - $VERS] !\n"
         if [ "$INFORM" == "" ]; then
-            printf "$1\n$TRN\n$NAME\n$TRN\n$BODY\n$TRN\n"
+            printf "\n$TRN\n$NAME [$VERS] $PUBL\n$TRN\n$BODY\n$TRN\n"
         fi
         if [ ! "$INFORM" == "" ]; then
-            send_email "$INFORM" "GITHUB - NEW Version available [$1 - $VERS] !\n" "$BODY"
+            send_email "$INFORM" "GITHUB NEW Version [$NAME - $VERS] $PUBL !\n" "\n$NAME [$VERS] $PUBL\n$BODY\n"
         fi
         if [ ! "$INFORMCC" == "" ]; then
-            send_email "$INFORMCC" "GITHUB - NEW Version available [$1 - $VERS] !\n" "$BODY"
+            send_email "$INFORMCC" "GITHUB NEW Version [$NAME - $VERS] $PUBL !\n" "\n$NAME [$VERS] $PUBL\n$BODY\n"
         fi
     else
-        printf "$1 - $VERS\nNothing new...\n"
+        printf "$NAME - $VERS\nNothing new...\n"
     fi
     rm -f $(pwd)/latest
 }
