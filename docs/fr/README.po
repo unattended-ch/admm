@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-11-04 12:38+0000\n"
+"POT-Creation-Date: 2020-11-05 23:04+0000\n"
 "PO-Revision-Date: 2020-05-04 17:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -198,7 +198,7 @@ msgid "### FUNCTION KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:97
+#: ../README.md:98
 #, no-wrap
 msgid ""
 "       F1 - Display Help if available (press F6 to create a new man page)\n"
@@ -212,20 +212,21 @@ msgid ""
 "       F9 - Display admm.log\n"
 "       F10- Exit\n"
 "       SF1- Display admm.man\n"
-"       SF2- Run mc in folder wher menu file is located\n"
+"       SF2- Run mc in folder wherr menu file is located\n"
 "       SF3- Edit admm.conf\n"
+"       SF5- Edit functions.inc\n"
 "       SF7- Display ouput.log\n"
 "       SF8- Run admm-scripts.sh for export to server\n"
 "       SF9- Display changes.log\n"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:99
+#: ../README.md:100
 msgid "### NAVIGATION KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:105
+#: ../README.md:106
 #, no-wrap
 msgid ""
 "       UP-/DOWN-Arrow - Select Menu position\n"
@@ -236,12 +237,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:107
+#: ../README.md:108
 msgid "### MOUSE KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:110
+#: ../README.md:111
 #, no-wrap
 msgid ""
 "       Left           - Select a button by click, double-click to execute the command\n"
@@ -249,26 +250,26 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:112
+#: ../README.md:113
 msgid "### CONFIGURATION"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:114
+#: ../README.md:115
 msgid "- [admm.conf](admm.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:116
+#: ../README.md:117
 msgid "- [admm.man](docs/admm.man)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:118
+#: ../README.md:119
 msgid "- [scripts/debian/index.mnu](scripts/debian/index.mnu)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:120
+#: ../README.md:121
 msgid "- [scripts/debian/index.conf](scripts/debian/index.conf)"
 msgstr ""

@@ -1,13 +1,13 @@
 #!/bin/bash
 #----------------------------------------------------------------------
-# Description: Internal functions for admm menu scripts
+# Description: Internals for admm menu scripts
 # Author: Automatix <github@unattended.ch>
 # Created at: Sat Oct 31 00:55:09 UTC 2020
 #
 # (c) 2020 Automatix  All rights reserved.
 #----------------------------------------------------------------------
 #
-TRN="-------------------------------------------------------------------------------"
+TRN="------------------------------------------------------------------------------------------------"
 export GPG_TTY=$(tty)
 export DISPLAY=:0.0
 #----------------------------------------------------------------------
@@ -49,6 +49,7 @@ INFO() {
 HEADER() {
 	printf "%s\n%s\n%s\n" "$TRN" "--- $1" "$TRN"
 }
+
 #----------------------------------------------------------------------
 # Function    : HHEADER [message]
 # Description : Display a half header with message
@@ -56,6 +57,15 @@ HEADER() {
 #----------------------------------------------------------------------
 HHEADER() {
 	printf "%s\n%s\n" "--- $1" "$TRN"
+}
+
+#----------------------------------------------------------------------
+# Function    : HEADER [message]
+# Description : Display a header with pseudo picture
+# Parameters  : [message] Message to display
+#----------------------------------------------------------------------
+PHEADER() {
+	printf "%s\n%s\n%s\n" "$TRN" "$1" "$TRN"
 }
 
 #----------------------------------------------------------------------
@@ -164,7 +174,11 @@ wait_any_key() {
 # Parameters  : none
 #----------------------------------------------------------------------
 intro() {
-	HEADER "ADMin Menu (c) unattended.ch"
+    if [ -f "$(dirname $0)/plugins/logo/intro.logo" ]; then
+        PHEADER "$(cat $(dirname $0)/plugins/logo/intro.logo)"
+    else
+        HEADER "ADMin Menu (c) unattended.ch"
+    fi
 }
 
 #----------------------------------------------------------------------
@@ -448,4 +462,75 @@ log() {
         DT=$(date +%Y.%m.%d %H:%M:%s)
         printf "%s : %s" "$DT" "$2" | tee -a $1
     fi
+}
+
+#----------------------------------------------------------------------
+# Function    : crontab_header [username]
+# Description : Append header to crontab if not exists
+# Parameters  : [username] Username
+#----------------------------------------------------------------------
+crontab_header() {
+    EXISTS=$(sudo grep '# Example of job definition' /var/spool/cron/crontabs/$1)
+    if [ "$EXISTS" == "" ]; then
+    HEADER "Adding header"
+    crontab -l ; (cat <<EOT) | crontab -
+# Mail address for cron jobs
+MAILTO=""
+#
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+EOT
+    fi
+}
+
+#----------------------------------------------------------------------
+# Function    : crontab_add [username] [shedule] [script]
+# Description : Add entry to user crontab
+# Parameters  : [username] Username
+#               [shedule] See above for example
+#               [script]  Full /path/filename.sh
+#----------------------------------------------------------------------
+crontab_add() {
+FNAME=${2##*/}
+EXISTS=$(sudo grep "$FNAME" /var/spool/cron/crontabs/$1)
+if [ "$EXISTS" == "" ]; then
+    (crontab -l ; echo "$2 $3 2>>/dev/null")| crontab -
+fi
+}
+
+#----------------------------------------------------------------------
+# Function    : update_apt
+# Description : run apt update if the last run was more than 60 seconds
+# Parameters  : none
+#----------------------------------------------------------------------
+update_apt() {
+if [ -f "/var/lib/apt/periodic/update-success-stamp" ]; then
+    # Get last apt update success time
+    LAST=$(sudo date -r /var/lib/apt/periodic/update-success-stamp +%s)
+    NOW=$(date +%s)
+    DIFF=$(($NOW-$LAST))
+    # If it's more than 1 minute reload it
+    if [ "$DIFF" -gt "60" ]; then
+        sudo apt update 2>/dev/null
+    fi
+else
+    sudo apt update 2>/dev/null
+fi
+sudo apt list --upgradable 2>/dev/null
+}
+
+#----------------------------------------------------------------------
+# Function    : errtrap
+# Description : Catch error functions and exit
+# Parameters  : 
+#----------------------------------------------------------------------
+errtrap() {
+    echo "Exit from errtrap()"
+    exit 0
 }
