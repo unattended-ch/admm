@@ -133,5 +133,10 @@
 - [scripts/debian/index.conf](scripts/debian/index.conf)
 
 
-[main]: docs/admm.png [german]: docs/de/README.md [english]: README.md
+[main]: docs/admm.png
+
+[german]: docs/de/README.md
+
+[english]: README.md
+
 [tutorial]: docs/presentation/
