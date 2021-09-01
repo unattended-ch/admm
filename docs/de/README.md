@@ -126,7 +126,7 @@
 
 ## DOWNLOAD
 
-    [admm herunterladen][releases]
+  [admm herunterladen][releases]
 
 ## KONFIGURATION
 
