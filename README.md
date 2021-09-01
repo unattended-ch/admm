@@ -6,6 +6,29 @@
 
        Manage your server from console
 
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#description">Description</a>
+    </li>
+    <li>
+      <a href="#Synopsis">Synopsis</a>
+      <ul>
+        <li><a href="#options">Options</a></li>
+        <li><a href="#files">Files</a></li>
+        <li><a href="#function keys">Funktion keys</a></li>
+        <li><a href="#navigation keys">Navigation keys</a></li>
+        <li><a href="#mouse keys">Mouse keys</a></li>
+      </ul>
+    </li>
+    <li><a href="#download">Download</a></li>
+    <li><a href="#configuration">Configuration</a></li>
+  </ol>
+</details>
+
+
 ![Main Page][main]
 
 ## DESCRIPTION

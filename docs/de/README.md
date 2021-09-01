@@ -6,6 +6,29 @@
 
        Den Server von den Konsole verwalten
 
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#beschreibung">Beschreibung</a>
+    </li>
+    <li>
+      <a href="#übersicht">Übersicht</a>
+      <ul>
+        <li><a href="#optionen">Optionen</a></li>
+        <li><a href="#dateien">Dateien</a></li>
+        <li><a href="#funktions tasten">Funktions teasten</a></li>
+        <li><a href="#navigations tasten">Navigations tasten</a></li>
+        <li><a href="#maus testen">Maus testen</a></li>
+      </ul>
+    </li>
+    <li><a href="#download">Download</a></li>
+    <li><a href="#konfiguration">Konfiguration</a></li>
+  </ol>
+</details>
+
+
 ![Main Page][main]
 
 ## BESCHREIBUNG
