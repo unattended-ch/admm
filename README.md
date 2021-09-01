@@ -18,7 +18,7 @@
       <ul>
         <li><a href="#options">Options</a></li>
         <li><a href="#files">Files</a></li>
-        <li><a href="#function keys">Funktion keys</a></li>
+        <li><a href="#function keys">Function keys</a></li>
         <li><a href="#navigation keys">Navigation keys</a></li>
         <li><a href="#mouse keys">Mouse keys</a></li>
       </ul>

@@ -18,9 +18,9 @@
       <ul>
         <li><a href="#optionen">Optionen</a></li>
         <li><a href="#dateien">Dateien</a></li>
-        <li><a href="#funktions tasten">Funktions teasten</a></li>
+        <li><a href="#funktions tasten">Funktions tasten</a></li>
         <li><a href="#navigations tasten">Navigations tasten</a></li>
-        <li><a href="#maus testen">Maus testen</a></li>
+        <li><a href="#maus tasten">Maus tasten</a></li>
       </ul>
     </li>
     <li><a href="#download">Download</a></li>
