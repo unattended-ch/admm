@@ -122,4 +122,4 @@
 [main]: docs/admm.png
 [german]: docs/de/README.md
 [english]: README.md
-[tutorial]: presentation/
+[tutorial]: docs/presentation/
