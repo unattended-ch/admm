@@ -4,7 +4,7 @@
 
        ADMin Menü TUI
 
-       Den Server von den Konsole verwalten
+       Den Server von der Konsole verwalten
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
