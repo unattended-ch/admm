@@ -1,6 +1,8 @@
-# admm [English][english]
+[English][english]
 
-       admm - ADMin Menü TUI
+# admm
+
+       ADMin Menü TUI
 
        Den Server von den Konsole verwalten
 

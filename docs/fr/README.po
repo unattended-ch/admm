@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-01 18:07+0000\n"
+"POT-Creation-Date: 2021-09-01 18:11+0000\n"
 "PO-Revision-Date: 2020-05-04 17:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,95 +19,100 @@ msgstr ""
 
 #. type: Plain text
 #: ../README.md:2
-msgid "# admm [Deutsch][german]"
+msgid "[Deutsch][german]"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:4
-#, no-wrap
-msgid "       admm - ADMin Menu TUI\n"
+msgid "# admm"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:6
 #, no-wrap
-msgid "       Manage your server from console\n"
+msgid "       ADMin Menu TUI\n"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:8
-msgid "![Main Page][main]"
+#, no-wrap
+msgid "       Manage your server from console\n"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:10
-msgid "## DESCRIPTION"
+msgid "![Main Page][main]"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:12
-#, no-wrap
-msgid "       admm is a administrator menu TUI for console based on shell scripts\n"
+msgid "## DESCRIPTION"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:14
 #, no-wrap
-msgid "       admm [OPTIONS] <Enter>\n"
+msgid "       admm is a administrator menu TUI for console based on shell scripts\n"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:16
 #, no-wrap
-msgid "       admm is written with Lazarus and the freevision package\n"
+msgid "       admm [OPTIONS] <Enter>\n"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:18
-msgid "[Tutorial Videos][tutorial]"
+#, no-wrap
+msgid "       admm is written with Lazarus and the freevision package\n"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:20
+msgid "[Tutorial Videos][tutorial]"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:22
 msgid "## SYNOPSIS"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:22
+#: ../README.md:24
 msgid ""
 "The basic idea is to use existing shell scripts and display them in a menu"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:24
+#: ../README.md:26
 msgid ""
 "Start admm and press F4 to edit index.mnu or press F3 to edit index.conf for "
 "your needs"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:26
+#: ../README.md:28
 msgid ""
 "With admm you can edit the menus and scripts, append a new entry to menus "
 "and add new scripts"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:29
+#: ../README.md:31
 msgid ""
 "If a command is executed, the screen output will be appended to output.log "
 "To send output.log as email to $INFORM run admm -e"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:32
+#: ../README.md:34
 msgid ""
 "If a menu or script file is edited, the menu version will be incremented and "
 "all modifications are saved as diff output in file changes.log"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:37
+#: ../README.md:39
 msgid ""
 "On Master and Clients you always load the scripts from the Master Server= "
 "URL if specified [admm.conf -> Server=http://server.domain/share/admm-"
@@ -117,7 +122,7 @@ msgid ""
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:40
+#: ../README.md:42
 msgid ""
 "To send emails you must install sSMTP or mSMTP on the master and define "
 "[index.conf -> INFORM=name@domain] You can find it under [System "
@@ -125,7 +130,7 @@ msgid ""
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:45
+#: ../README.md:47
 msgid ""
 "admm can autoplay hotkey commands with --run=\"X \" X is the hotkey "
 "character from Menu or Submenu, use \" \" to leave a submenu or \" \" to "
@@ -134,24 +139,24 @@ msgid ""
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:48
+#: ../README.md:50
 msgid ""
 "You can extend command line parameters with your own commands. You must "
 "insert your command in index.conf [Commands] -cmd=\"aa \"=Comment"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:50
+#: ../README.md:52
 msgid "GPG is used to create and read encrypted password files for scripts."
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:52
+#: ../README.md:54
 msgid "## OPTIONS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:61
+#: ../README.md:63
 #, no-wrap
 msgid ""
 "       -c --changes        Display changes.log\n"
@@ -165,7 +170,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:64
+#: ../README.md:66
 #, no-wrap
 msgid ""
 "       -u                  Run system dist-upgrade (see index.conf [Commands])\n"
@@ -173,12 +178,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:66
+#: ../README.md:68
 msgid "## FILES"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:77
+#: ../README.md:79
 #, no-wrap
 msgid ""
 "       /usr/local/bin/admm                               Executable\n"
@@ -194,12 +199,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:79
+#: ../README.md:81
 msgid "## FUNCTION KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:97
+#: ../README.md:99
 #, no-wrap
 msgid ""
 "       F1 - Display Help if available (press F6 to create a new man page)\n"
@@ -222,12 +227,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:99
+#: ../README.md:101
 msgid "## NAVIGATION KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:105
+#: ../README.md:107
 #, no-wrap
 msgid ""
 "       UP-/DOWN-Arrow - Select Menu position\n"
@@ -238,12 +243,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:107
+#: ../README.md:109
 msgid "## MOUSE KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:110
+#: ../README.md:112
 #, no-wrap
 msgid ""
 "       Left           - Select a button by click, double-click to execute the command\n"
@@ -251,32 +256,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:112
+#: ../README.md:114
 msgid "## CONFIGURATION"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:114
+#: ../README.md:116
 msgid "- [admm.conf](admm.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:116
+#: ../README.md:118
 msgid "- [admm.man](docs/admm.man)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:118
+#: ../README.md:120
 msgid "- [scripts/debian/index.mnu](scripts/debian/index.mnu)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:120
+#: ../README.md:122
 msgid "- [scripts/debian/index.conf](scripts/debian/index.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:125
+#: ../README.md:127
 msgid ""
 "[main]: docs/admm.png [german]: docs/de/README.md [english]: README.md "
 "[tutorial]: docs/presentation/"

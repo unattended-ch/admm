@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-01 18:07+0000\n"
-"PO-Revision-Date: 2021-09-01 18:05+0000\n"
+"POT-Creation-Date: 2021-09-01 18:11+0000\n"
+"PO-Revision-Date: 2021-09-01 18:12+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -19,68 +19,73 @@ msgstr ""
 
 #. type: Plain text
 #: ../README.md:2
-msgid "# admm [Deutsch][german]"
-msgstr "# admm [English][english]"
+msgid "[Deutsch][german]"
+msgstr "[English][english]"
 
 #. type: Plain text
 #: ../README.md:4
-#, no-wrap
-msgid "       admm - ADMin Menu TUI\n"
-msgstr "       admm - ADMin Menü TUI\n"
+msgid "# admm"
+msgstr ""
 
 #. type: Plain text
 #: ../README.md:6
+#, no-wrap
+msgid "       ADMin Menu TUI\n"
+msgstr "       ADMin Menü TUI\n"
+
+#. type: Plain text
+#: ../README.md:8
 #, no-wrap
 msgid "       Manage your server from console\n"
 msgstr "       Den Server von den Konsole verwalten\n"
 
 #. type: Plain text
-#: ../README.md:8
+#: ../README.md:10
 msgid "![Main Page][main]"
 msgstr "![Main Page][main]"
 
 #. type: Plain text
-#: ../README.md:10
+#: ../README.md:12
 msgid "## DESCRIPTION"
 msgstr "## BESCHREIBUNG"
 
 #. type: Plain text
-#: ../README.md:12
+#: ../README.md:14
 #, no-wrap
 msgid "       admm is a administrator menu TUI for console based on shell scripts\n"
 msgstr "       admm ist ein Administrator Menü TUI für Konsole basierend auf Shell scripts\n"
 
 #. type: Plain text
-#: ../README.md:14
+#: ../README.md:16
 #, no-wrap
 msgid "       admm [OPTIONS] <Enter>\n"
 msgstr "       admm [OPTIONEN] <Enter>\n"
 
 #. type: Plain text
-#: ../README.md:16
+#: ../README.md:18
 #, no-wrap
 msgid "       admm is written with Lazarus and the freevision package\n"
 msgstr "       admm wurde entwickelt mit Lazarus und freevision paket\n"
 
 #. type: Plain text
-#: ../README.md:18
+#: ../README.md:20
 msgid "[Tutorial Videos][tutorial]"
 msgstr "[Anleitungs Videos][tutorial]"
 
 #. type: Plain text
-#: ../README.md:20
+#: ../README.md:22
 msgid "## SYNOPSIS"
 msgstr "## ÜBERSICHT"
 
 #. type: Bullet: '       - '
-#: ../README.md:22
+#: ../README.md:24
 msgid ""
 "The basic idea is to use existing shell scripts and display them in a menu"
 msgstr ""
 "Die Grund Idee ist der Einsatz von existierenden Shell scripts in einem Menü"
 
 #. type: Bullet: '       - '
-#: ../README.md:24
+#: ../README.md:26
 msgid ""
 "Start admm and press F4 to edit index.mnu or press F3 to edit index.conf for "
 "your needs"
@@ -88,7 +93,7 @@ msgstr ""
 "Starte admm und drücke F4 um index.mnu oder F3 um index.conf zu bearbeiten"
 
 #. type: Bullet: '       - '
-#: ../README.md:26
+#: ../README.md:28
 msgid ""
 "With admm you can edit the menus and scripts, append a new entry to menus "
 "and add new scripts"
@@ -97,7 +102,7 @@ msgstr ""
 "neue Scripts erstellen"
 
 #. type: Bullet: '       - '
-#: ../README.md:29
+#: ../README.md:31
 msgid ""
 "If a command is executed, the screen output will be appended to output.log "
 "To send output.log as email to $INFORM run admm -e"
@@ -106,7 +111,7 @@ msgstr ""
 "log angehängt. Um output.log per Email an $INFORM zu versenden starte admm -e"
 
 #. type: Bullet: '       - '
-#: ../README.md:32
+#: ../README.md:34
 msgid ""
 "If a menu or script file is edited, the menu version will be incremented and "
 "all modifications are saved as diff output in file changes.log"
@@ -116,7 +121,7 @@ msgstr ""
 "log angehängt"
 
 #. type: Bullet: '       - '
-#: ../README.md:37
+#: ../README.md:39
 msgid ""
 "On Master and Clients you always load the scripts from the Master Server= "
 "URL if specified [admm.conf -> Server=http://server.domain/share/admm-"
@@ -131,7 +136,7 @@ msgstr ""
 "admm-scripts.tar.gz]"
 
 #. type: Bullet: '       - '
-#: ../README.md:40
+#: ../README.md:42
 msgid ""
 "To send emails you must install sSMTP or mSMTP on the master and define "
 "[index.conf -> INFORM=name@domain] You can find it under [System "
@@ -143,7 +148,7 @@ msgstr ""
 "Email Adresse"
 
 #. type: Bullet: '       - '
-#: ../README.md:45
+#: ../README.md:47
 msgid ""
 "admm can autoplay hotkey commands with --run=\"X \" X is the hotkey "
 "character from Menu or Submenu, use \" \" to leave a submenu or \" \" to "
@@ -156,7 +161,7 @@ msgstr ""
 "die Datei output.log gesendet. Nach dem versenden wird output.log gelöscht"
 
 #. type: Bullet: '       - '
-#: ../README.md:48
+#: ../README.md:50
 msgid ""
 "You can extend command line parameters with your own commands. You must "
 "insert your command in index.conf [Commands] -cmd=\"aa \"=Comment"
@@ -165,19 +170,19 @@ msgstr ""
 "dazu den Befehl einfügen in index.conf [Commands] -cmd=\"aa  \"=Comment"
 
 #. type: Bullet: '       - '
-#: ../README.md:50
+#: ../README.md:52
 msgid "GPG is used to create and read encrypted password files for scripts."
 msgstr ""
 "GPG wird verwendet um Verschlüsselte Dateien mit Passwörtern zu erstellen "
 "und zu lesen."
 
 #. type: Plain text
-#: ../README.md:52
+#: ../README.md:54
 msgid "## OPTIONS"
 msgstr "## OPTIONEN"
 
 #. type: Plain text
-#: ../README.md:61
+#: ../README.md:63
 #, no-wrap
 msgid ""
 "       -c --changes        Display changes.log\n"
@@ -199,7 +204,7 @@ msgstr ""
 "       -s --server=\"\"      Wähle Server mit admm-*.tar.gz\n"
 
 #. type: Plain text
-#: ../README.md:64
+#: ../README.md:66
 #, no-wrap
 msgid ""
 "       -u                  Run system dist-upgrade (see index.conf [Commands])\n"
@@ -209,12 +214,12 @@ msgstr ""
 "       -a                  Starte System autoremove (siehe index.conf [Commands])\n"
 
 #. type: Plain text
-#: ../README.md:66
+#: ../README.md:68
 msgid "## FILES"
 msgstr "## DATEIEN"
 
 #. type: Plain text
-#: ../README.md:77
+#: ../README.md:79
 #, no-wrap
 msgid ""
 "       /usr/local/bin/admm                               Executable\n"
@@ -240,12 +245,12 @@ msgstr ""
 "       /usr/local/man/admm.man                           Man Seite für admm\n"
 
 #. type: Plain text
-#: ../README.md:79
+#: ../README.md:81
 msgid "## FUNCTION KEYS"
 msgstr "## FUNKTIONS TASTEN"
 
 #. type: Plain text
-#: ../README.md:97
+#: ../README.md:99
 #, no-wrap
 msgid ""
 "       F1 - Display Help if available (press F6 to create a new man page)\n"
@@ -285,12 +290,12 @@ msgstr ""
 "       SF9- changes.log anzeigen\n"
 
 #. type: Plain text
-#: ../README.md:99
+#: ../README.md:101
 msgid "## NAVIGATION KEYS"
 msgstr "## NAVIGATIONS TASTEN"
 
 #. type: Plain text
-#: ../README.md:105
+#: ../README.md:107
 #, no-wrap
 msgid ""
 "       UP-/DOWN-Arrow - Select Menu position\n"
@@ -306,12 +311,12 @@ msgstr ""
 "       ENTER          - Ausgewählte Menü position ausführen\n"
 
 #. type: Plain text
-#: ../README.md:107
+#: ../README.md:109
 msgid "## MOUSE KEYS"
 msgstr "## MAUS TASTEN"
 
 #. type: Plain text
-#: ../README.md:110
+#: ../README.md:112
 #, no-wrap
 msgid ""
 "       Left           - Select a button by click, double-click to execute the command\n"
@@ -321,32 +326,32 @@ msgstr ""
 "       Right          - Taste auswählen durch klick, doppel-klick bearbeiten der Datei\n"
 
 #. type: Plain text
-#: ../README.md:112
+#: ../README.md:114
 msgid "## CONFIGURATION"
 msgstr "## KONFIGURATION"
 
 #. type: Plain text
-#: ../README.md:114
+#: ../README.md:116
 msgid "- [admm.conf](admm.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:116
+#: ../README.md:118
 msgid "- [admm.man](docs/admm.man)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:118
+#: ../README.md:120
 msgid "- [scripts/debian/index.mnu](scripts/debian/index.mnu)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:120
+#: ../README.md:122
 msgid "- [scripts/debian/index.conf](scripts/debian/index.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:125
+#: ../README.md:127
 msgid ""
 "[main]: docs/admm.png [german]: docs/de/README.md [english]: README.md "
 "[tutorial]: docs/presentation/"
