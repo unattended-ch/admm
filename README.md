@@ -4,7 +4,7 @@
 
        Manage your server from console
 
-![Main Page](/docs/admm.png)
+![Main Page][main]
 
 ## DESCRIPTION
 
@@ -14,7 +14,7 @@
 
        admm is written with Lazarus and the freevision package
 
-       [Tutorial Videos][tutorials]
+[Tutorial Videos][tutorial]
 
 ## SYNOPSIS
 
@@ -119,6 +119,7 @@
 - [scripts/debian/index.conf](scripts/debian/index.conf)
 
 
+[main]: docs/admm.png
 [german]: docs/de/README.md
 [english]: README.md
-[tutorials]: presentation/
+[tutorial]: presentation/

@@ -4,7 +4,7 @@
 
        Den Server von den Konsole verwalten
 
-![Main Page](/docs/admm.png)
+![Main Page][main]
 
 ## BESCHREIBUNG
 
@@ -14,7 +14,7 @@
 
        admm wurde entwickelt mit Lazarus und freevision paket
 
-       [Anleitungs Videos][tutorials]
+[Anleitungs Videos][tutorial]
 
 ## ÜBERSICHT
 
@@ -131,4 +131,5 @@
 - [scripts/debian/index.conf](scripts/debian/index.conf)
 
 
-[german]: docs/de/README.md [english]: README.md [tutorials]: presentation/
+[main]: docs/admm.png [german]: docs/de/README.md [english]: README.md
+[tutorial]: presentation/
