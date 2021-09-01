@@ -1,8 +1,6 @@
 # admm
 
-[README.md - Englisch](/README.md)
-
-[Tutorial Videos](docs/presentation/)
+[README.md - Englisch](english)
 
 
 ## NAME
@@ -18,6 +16,8 @@
        admm [OPTIONEN] <Enter>
 
        admm wurde entwickelt mit Lazarus und freevision paket
+
+       [Tutorial Videos][tutorials]
 
 ## ÜBERSICHT
 
@@ -133,3 +133,5 @@
 
 - [scripts/debian/index.conf](scripts/debian/index.conf)
 
+
+[german]: docs/de/README.md [english]: README.md [tutorials]: presentation/

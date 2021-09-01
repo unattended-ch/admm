@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-01 17:43+0000\n"
+"POT-Creation-Date: 2021-09-01 17:51+0000\n"
 "PO-Revision-Date: 2020-05-04 17:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -24,51 +24,52 @@ msgstr ""
 
 #. type: Plain text
 #: ../README.md:4
-msgid "[README.md - German](docs/de/README.md)"
+msgid "[README.md - German][german]"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:6
-msgid "[Tutorial Videos](docs/presentation/)"
-msgstr ""
-
-#. type: Plain text
-#: ../README.md:9
+#: ../README.md:7
 msgid "## NAME"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:11
+#: ../README.md:9
 #, no-wrap
 msgid "       admm - ADMin Menu TUI\n"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:13
+#: ../README.md:11
 msgid "![Main Page](/docs/admm.png)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:15
+#: ../README.md:13
 msgid "## DESCRIPTION"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:17
+#: ../README.md:15
 #, no-wrap
 msgid "       admm is a administrator menu TUI for console based on shell scripts\n"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:19
+#: ../README.md:17
 #, no-wrap
 msgid "       admm [OPTIONS] <Enter>\n"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:21
+#: ../README.md:19
 #, no-wrap
 msgid "       admm is written with Lazarus and the freevision package\n"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:21
+#, no-wrap
+msgid "       [Tutorial Videos][tutorials]\n"
 msgstr ""
 
 #. type: Plain text
@@ -277,4 +278,10 @@ msgstr ""
 #. type: Plain text
 #: ../README.md:123
 msgid "- [scripts/debian/index.conf](scripts/debian/index.conf)"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:127
+msgid ""
+"[german]: docs/de/README.md [english]: README.md [tutorials]: presentation/"
 msgstr ""
