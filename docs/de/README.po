@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2021-09-01 18:51+0000\n"
-"PO-Revision-Date: 2021-09-01 18:52+0000\n"
+"PO-Revision-Date: 2021-09-01 18:55+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -90,7 +90,7 @@ msgstr ""
 #. type: Plain text
 #: ../README.md:33
 msgid "![Main Page][main]"
-msgstr ""
+msgstr "![Main Page][main]"
 
 #. type: Plain text
 #: ../README.md:35
