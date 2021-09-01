@@ -1,11 +1,8 @@
-# admm
-
-[README.md - Englisch](english)
-
-
-## NAME
+# admm [English][english]
 
        admm - ADMin Menü TUI
+
+       Den Server von den Konsole verwalten
 
 ![Main Page](/docs/admm.png)
 
@@ -17,7 +14,7 @@
 
        admm wurde entwickelt mit Lazarus und freevision paket
 
-       [Tutorial Videos][tutorials]
+       [Anleitungs Videos][tutorials]
 
 ## ÜBERSICHT
 

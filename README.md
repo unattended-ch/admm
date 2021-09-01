@@ -1,11 +1,8 @@
-# admm
-
-[README.md - German][german]
-
-
-## NAME
+# admm  [Deutsch][german]
 
        admm - ADMin Menu TUI
+
+       Manage your server from console
 
 ![Main Page](/docs/admm.png)
 
