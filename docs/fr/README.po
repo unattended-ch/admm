@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-01 18:26+0000\n"
+"POT-Creation-Date: 2021-09-01 18:31+0000\n"
 "PO-Revision-Date: 2020-05-04 17:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -74,45 +74,50 @@ msgstr ""
 
 #. type: Plain text
 #: ../README.md:22
+msgid "[Discussion][discuss]"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:24
 msgid "## SYNOPSIS"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:24
+#: ../README.md:26
 msgid ""
 "The basic idea is to use existing shell scripts and display them in a menu"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:26
+#: ../README.md:28
 msgid ""
 "Start admm and press F4 to edit index.mnu or press F3 to edit index.conf for "
 "your needs"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:28
+#: ../README.md:30
 msgid ""
 "With admm you can edit the menus and scripts, append a new entry to menus "
 "and add new scripts"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:31
+#: ../README.md:33
 msgid ""
 "If a command is executed, the screen output will be appended to output.log "
 "To send output.log as email to $INFORM run admm -e"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:34
+#: ../README.md:36
 msgid ""
 "If a menu or script file is edited, the menu version will be incremented and "
 "all modifications are saved as diff output in file changes.log"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:39
+#: ../README.md:41
 msgid ""
 "On Master and Clients you always load the scripts from the Master Server= "
 "URL if specified [admm.conf -> Server=http://server.domain/share/admm-"
@@ -122,7 +127,7 @@ msgid ""
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:42
+#: ../README.md:44
 msgid ""
 "To send emails you must install sSMTP or mSMTP on the master and define "
 "[index.conf -> INFORM=name@domain] You can find it under [System "
@@ -130,7 +135,7 @@ msgid ""
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:47
+#: ../README.md:49
 msgid ""
 "admm can autoplay hotkey commands with --run=\"X \" X is the hotkey "
 "character from Menu or Submenu, use \" \" to leave a submenu or \" \" to "
@@ -139,24 +144,24 @@ msgid ""
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:50
+#: ../README.md:52
 msgid ""
 "You can extend command line parameters with your own commands. You must "
 "insert your command in index.conf [Commands] -cmd=\"aa \"=Comment"
 msgstr ""
 
 #. type: Bullet: '       - '
-#: ../README.md:52
+#: ../README.md:54
 msgid "GPG is used to create and read encrypted password files for scripts."
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:54
+#: ../README.md:56
 msgid "## OPTIONS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:63
+#: ../README.md:65
 #, no-wrap
 msgid ""
 "       -c --changes        Display changes.log\n"
@@ -170,7 +175,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:66
+#: ../README.md:68
 #, no-wrap
 msgid ""
 "       -u                  Run system dist-upgrade (see index.conf [Commands])\n"
@@ -178,12 +183,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:68
+#: ../README.md:70
 msgid "## FILES"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:79
+#: ../README.md:81
 #, no-wrap
 msgid ""
 "       /usr/local/bin/admm                               Executable\n"
@@ -199,12 +204,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:81
+#: ../README.md:83
 msgid "## FUNCTION KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:99
+#: ../README.md:101
 #, no-wrap
 msgid ""
 "       F1 - Display Help if available (press F6 to create a new man page)\n"
@@ -227,12 +232,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:101
+#: ../README.md:103
 msgid "## NAVIGATION KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:107
+#: ../README.md:109
 #, no-wrap
 msgid ""
 "       UP-/DOWN-Arrow - Select Menu position\n"
@@ -243,12 +248,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:109
+#: ../README.md:111
 msgid "## MOUSE KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:112
+#: ../README.md:114
 #, no-wrap
 msgid ""
 "       Left           - Select a button by click, double-click to execute the command\n"
@@ -256,62 +261,67 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:114
+#: ../README.md:116
 msgid "## DOWNLOAD"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:116
+#: ../README.md:118
 #, no-wrap
 msgid "    [Download admm Binary][releases]\n"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:118
+#: ../README.md:120
 msgid "## CONFIGURATION"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:120
+#: ../README.md:122
 msgid "- [admm.conf](admm.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:122
+#: ../README.md:124
 msgid "- [admm.man](docs/admm.man)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:124
+#: ../README.md:126
 msgid "- [scripts/debian/index.mnu](scripts/debian/index.mnu)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:126
+#: ../README.md:128
 msgid "- [scripts/debian/index.conf](scripts/debian/index.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:129
+#: ../README.md:131
 msgid "[main]: docs/admm.png"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:131
+#: ../README.md:133
 msgid "[german]: docs/de/README.md"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:133
+#: ../README.md:135
 msgid "[english]: README.md"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:135
+#: ../README.md:137
 msgid "[tutorial]: docs/presentation/"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:136
+#: ../README.md:139
 msgid "[releases]: https://github.com/unattended-ch/admm/releases/"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:141
+msgid "[discuss]: https://github.com/unattended-ch/admm/discussions/"
 msgstr ""

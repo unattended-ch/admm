@@ -18,6 +18,8 @@
 
 [Tutorial Videos][tutorial]
 
+[Discussion][discuss]
+
 ## SYNOPSIS
 
        - The basic idea is to use existing shell scripts and display them in a menu
@@ -134,3 +136,6 @@
 [tutorial]: docs/presentation/
 
 [releases]: https://github.com/unattended-ch/admm/releases/
+
+[discuss]: https://github.com/unattended-ch/admm/discussions/
+
