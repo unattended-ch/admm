@@ -7,7 +7,7 @@
 # (c) 2020 Automatix  All rights reserved.
 #----------------------------------------------------------------------
 #
-TRN="------------------------------------------------------------------------------------------------"
+TRN="--------------------------------------------------------------------------------------------"
 export GPG_TTY=$(tty)
 export DISPLAY=:0.0
 #----------------------------------------------------------------------
@@ -35,8 +35,8 @@ popd() {
 #----------------------------------------------------------------------
 INFO() {
     if [ "$DEBUG" == "1" ]; then
-        #MSG=$(echo "$1" | more)
-        MSG=$1
+        #MSG=$(printf "$1")
+        MSG=$(echo "$1")
         printf "%s\n%s\n%s\n" "$TRN" "$MSG" "$TRN"
     fi
 }
@@ -47,7 +47,8 @@ INFO() {
 # Parameters  : [message] Message to display
 #----------------------------------------------------------------------
 HEADER() {
-	printf "%s\n%s\n%s\n" "$TRN" "--- $1" "$TRN"
+    MSG=$(printf "$1")
+    printf "%s\n%s\n%s\n" "$TRN" "--- $MSG" "$TRN"
 }
 
 #----------------------------------------------------------------------
@@ -56,7 +57,8 @@ HEADER() {
 # Parameters  : [message] Message to display
 #----------------------------------------------------------------------
 HHEADER() {
-	printf "%s\n%s\n" "--- $1" "$TRN"
+    MSG=$(printf "$1")
+    printf "%s\n%s\n" "--- $MSG" "$TRN"
 }
 
 #----------------------------------------------------------------------
@@ -65,7 +67,8 @@ HHEADER() {
 # Parameters  : [message] Message to display
 #----------------------------------------------------------------------
 PHEADER() {
-	printf "%s\n%s\n%s\n" "$TRN" "$1" "$TRN"
+    MSG=$(printf "$1")
+    printf "%s\n%s\n" "$MSG" "$TRN"
 }
 
 #----------------------------------------------------------------------
@@ -74,7 +77,7 @@ PHEADER() {
 # Parameters  :
 #----------------------------------------------------------------------
 finish() {
-	HEADER "Finished"
+    HEADER "Finished"
 }
 
 #----------------------------------------------------------------------
@@ -175,6 +178,8 @@ wait_any_key() {
 #----------------------------------------------------------------------
 intro() {
     if [ -f "$(dirname $0)/plugins/logo/intro.logo" ]; then
+        #LOGO=$(cat $(dirname $0)/plugins/logo/intro.logo | sed '/^ *$/d')
+        #PHEADER "$(cat $(dirname $0)/plugins/logo/intro.logo)"
         PHEADER "$(cat $(dirname $0)/plugins/logo/intro.logo)"
     else
         HEADER "ADMin Menu (c) unattended.ch"
@@ -376,9 +381,9 @@ git_latest() {
     #NAME=$(cat $(pwd)/latest | jq '.name' | sed 's/\"//g')
     BODY=$(cat $(pwd)/latest | jq '.body' | sed 's/\"//g')
     PUBL=$(cat $(pwd)/latest | jq '.published_at' | sed 's/\"//g' | sed 's/[T|Z]/ /g')
-    if [ "$NAME" == "" ]; then
+    #if [ "$NAME" == "" ]; then
         NAME=$1
-    fi
+    #fi
     git_version $1 $2 "$VERS"
     if [ ! "$VERS" == "$LAST" ]; then
         printf "GITHUB - NEW Version available [$NAME - $VERS] !\n"
@@ -435,6 +440,7 @@ purge_files() {
 #----------------------------------------------------------------------
 # Function    : read_input [message] [default]
 # Description : Display a message and wait for key input
+#               Return [default] if only enter is pressed
 # Parameters  : [message] Message to display "$MSG [$DEF] : "
 #               [default] Default value
 #----------------------------------------------------------------------
@@ -449,6 +455,7 @@ read_input() {
     if [ "$INPUT" == "" ]; then
         INPUT=$DEF
     fi
+    printf "\n"
 }
 
 #----------------------------------------------------------------------
@@ -497,7 +504,8 @@ EOT
 #               [script]  Full /path/filename.sh
 #----------------------------------------------------------------------
 crontab_add() {
-FNAME=${2##*/}
+INFO "User : $1\nTime : $2\nFile : $3"
+FNAME=${3##*/}
 EXISTS=$(sudo grep "$FNAME" /var/spool/cron/crontabs/$1)
 if [ "$EXISTS" == "" ]; then
     (crontab -l ; echo "$2 $3 2>>/dev/null")| crontab -
@@ -527,10 +535,75 @@ sudo apt list --upgradable 2>/dev/null
 
 #----------------------------------------------------------------------
 # Function    : errtrap
-# Description : Catch error functions and exit
+# Description : Catch trap and exit
 # Parameters  : 
 #----------------------------------------------------------------------
 errtrap() {
     echo "Exit from errtrap()"
     exit 0
+}
+
+#----------------------------------------------------------------------
+# Function    : set_errtrap 
+# Description : Set trap for trap events
+#               For a list of events use "trap -l"
+# Parameters  : [trapnum] List of trap numbers eg. "1 2 3 6 9"
+#----------------------------------------------------------------------
+set_errtrap() {
+    if [ "$1" == "" ]; then
+        TRP="1 2 3 6 9"
+    else
+        TRP=$1
+    fi
+    trap errtrap $TRP
+}
+
+#----------------------------------------------------------------------
+# Function    : load_globals [incfile]
+# Description : Load global variables from admm
+# Parameters  : [incfile] File name eg. "$INC"
+#----------------------------------------------------------------------
+load_globals() {
+    GLOBALS=$(dirname $1)/globals.inc
+    . $GLOBALS
+}
+
+#----------------------------------------------------------------------
+# Function    : load_inc [folder]
+# Description : Load .inc files from menu subfolder
+# Parameters  : [folder] Menu subfolder to search
+#----------------------------------------------------------------------
+load_inc() {
+    FOUND=$(ls $1/*.inc)
+    INFO "$FOUND"
+    if [ ! "$FOUND" == "" ]; then
+        for VAR in $FOUND; do
+            INCL="$VAR"
+            . $INCL
+        done
+    fi
+}
+
+#----------------------------------------------------------------------
+# Function    : clear_empty_files [folder]
+# Description : Clear empty (zero size) files recursively from [folder]
+# Parameters  : [folder]
+#----------------------------------------------------------------------
+clear_empty_files() {
+    if [ ! "$1" == "" ]; then
+        find $1 -name '*' -size 0 -exec rm {} \;
+    fi
+}
+
+#----------------------------------------------------------------------
+# Function    : php_version
+# Description : Read PHP version
+# Parameters  : none
+#----------------------------------------------------------------------
+php_version() {
+    FOUND=$(php --version)
+    if [ ! "$FOUND" == "" ]; then
+        PHPVER=$(echo $FOUND | grep PHP | head -n1 | awk '{print $2}' | tr '-' ' ' | awk '{print $1}' | tr '.' ' ' | awk '{print $1"."$2}')
+        echo "$PHPVER"
+    fi
 }

@@ -1,15 +1,16 @@
+# admm
 [README.md - German](docs/de/README.md)
 
 [Tutorial Videos](docs/presentation/)
 
 
-### NAME
+## NAME
 
        admm - ADMin Menu TUI
 
 ![Main Page](/docs/admm.png)
 
-### DESCRIPTION
+## DESCRIPTION
 
        admm is a administrator menu TUI for console based on shell scripts
 
@@ -17,7 +18,7 @@
 
        admm is written with Lazarus and the freevision package
 
-### SYNOPSIS
+## SYNOPSIS
 
        - The basic idea is to use existing shell scripts and display them in a menu
 
@@ -49,7 +50,7 @@
 
        - GPG is used to create and read encrypted password files for scripts.
 
-### OPTIONS
+## OPTIONS
 
        -c --changes        Display changes.log
        -d --debug=N        Set debug level (see admm.conf)
@@ -63,7 +64,7 @@
        -u                  Run system dist-upgrade (see index.conf [Commands])
        -a                  Run system autoremove (see index.conf [Commands])
 
-### FILES
+## FILES
 
        /usr/local/bin/admm                               Executable
        /usr/local/etc/admm.conf                          Configuration for admm
@@ -76,7 +77,7 @@
        /usr/local/share/admm/output.log                  Log file with output of executed scripts (Debug= > 0)
        /usr/local/man/admm.man                           This page
 
-### FUNCTION KEYS
+## FUNCTION KEYS
 
        F1 - Display Help if available (press F6 to create a new man page)
        F2 - Start mc
@@ -96,7 +97,7 @@
        SF8- Run admm-scripts.sh for export to server
        SF9- Display changes.log
 
-### NAVIGATION KEYS
+## NAVIGATION KEYS
 
        UP-/DOWN-Arrow - Select Menu position
        RIGHT-Arrow    - Open Submenu (not Shell scripts)
@@ -104,12 +105,12 @@
        SPACE          - Exit from Menu or Submenu
        ENTER          - Execute selected Menu position
 
-### MOUSE KEYS
+## MOUSE KEYS
 
        Left           - Select a button by click, double-click to execute the command
        Right          - Select a button by click, double-click to edit the file
 
-### CONFIGURATION
+## CONFIGURATION
 
 - [admm.conf](admm.conf)
 

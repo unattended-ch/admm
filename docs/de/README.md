@@ -1,16 +1,15 @@
-# admm
 [README.md - Englisch](/README.md)
 
 [Tutorial Videos](docs/presentation/)
 
 
-## NAME
+### NAME
 
        admm - ADMin Menü TUI
 
 ![Main Page](/docs/admm.png)
 
-## BESCHREIBUNG
+### BESCHREIBUNG
 
        admm ist ein Administrator Menü TUI für Konsole basierend auf Shell scripts
 
@@ -18,7 +17,7 @@
 
        admm wurde entwickelt mit Lazarus und freevision paket
 
-## ÜBERSICHT
+### ÜBERSICHT
 
        - Die Grund Idee ist der Einsatz von existierenden Shell scripts in
          einem Menü
@@ -62,7 +61,7 @@
        - GPG wird verwendet um Verschlüsselte Dateien mit Passwörtern zu
          erstellen und zu lesen.
 
-## OPTIONEN
+### OPTIONEN
 
        -c --changes        changes.log anzeigen
        -d --debug=N        Debug level setzen (see admm.conf)
@@ -76,7 +75,7 @@
        -u                  Starte System dist\-upgrade (siehe index.conf [Commands])
        -a                  Starte System autoremove (siehe index.conf [Commands])
 
-## DATEIEN
+### DATEIEN
 
        /usr/local/bin/admm                               Ausführbare Datei
        /usr/local/etc/admm.conf                          Konfiguration für admm
@@ -89,7 +88,7 @@
        /usr/local/share/admm/output.log                  Logdatei mit Ausgabe der ausgeführten Befehle (Debug= > 0)
        /usr/local/man/admm.man                           Man Seite für admm
 
-## FUNKTIONS TASTEN
+### FUNKTIONS TASTEN
 
        F1 - Hilfeseite anzeigen wenn vorhanden (drücke F6 für eine neue Seite)
        F2 - Starte mc
@@ -109,7 +108,7 @@
        SF8- admm-scripts.sh ausführen für Server export
        SF9- changes.log anzeigen
 
-## NAVIGATIONS TASTEN
+### NAVIGATIONS TASTEN
 
        UP-/DOWN-Arrow - Wähle Menü position
        RIGHT-Arrow    - Öffne Untermenü (nicht Shell scripts)
@@ -117,12 +116,12 @@
        SPACE          - Beende Menü or Untermenü
        ENTER          - Ausgewählte Menü position ausführen
 
-## MAUS TASTEN
+### MAUS TASTEN
 
        Left           - Taste auswählen durch klick, doppel-klick ausführen des Befehls
        Right          - Taste auswählen durch klick, doppel-klick bearbeiten der Datei
 
-## KONFIGURATION
+### KONFIGURATION
 
 - [admm.conf](admm.conf)
 

@@ -35,7 +35,14 @@
 2.0.0.39	SF2 open mc in menu folder, SF5 open functions.inc, SF8 execute admm-script.sh
 		git_ver() modified to read Github version of package with jq
 		Do not show press_any_key when mc is executed
-2.0.0.40	Create admm-globals.inc with global variables for cron scripts
-		Shell scripts from plugins/ added to addm-plugins.tar.gz
-		intro() display figlet text intro.logo
-2.0.0.41	admm-cmd.sh unset commands moved to cleanup() to handle trap
+2.0.0.40	Create scripts/debian/globals.inc with global variables for scripts
+		Shell scripts from plugins/ added to admm-plugins.tar.gz
+		intro() display figlet text from intro.logo
+2.0.0.41	admm-cmd.sh unset commands moved to cleanup() for trap handling
+2.0.0.42	/scripts/debian/admm-*.sh moved to /scripts/debian/tools/admm-*.sh
+		Call cleanup function on SIGINT to stay running
+2.0.0.43	Kill running admm-cmd.sh at exit or on Crtl-C
+2.0.0.44	Use "# " as comment line for .mnu files
+2.0.0.45	F2 start mc in home folder
+2.0.0.46	F1 display description from .sh and .inc for .mnu diplay .man
+2.0.1.0		
