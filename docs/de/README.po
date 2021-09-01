@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-01 18:16+0000\n"
-"PO-Revision-Date: 2021-09-01 18:16+0000\n"
+"POT-Creation-Date: 2021-09-01 18:26+0000\n"
+"PO-Revision-Date: 2021-09-01 18:28+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -322,52 +322,68 @@ msgid ""
 "       Left           - Select a button by click, double-click to execute the command\n"
 "       Right          - Select a button by click, double-click to edit the file\n"
 msgstr ""
-"       Left           - Taste auswählen durch klick, doppel-klick ausführen des Befehls\n"
-"       Right          - Taste auswählen durch klick, doppel-klick bearbeiten der Datei\n"
+"       Links           - Taste auswählen durch klick, doppel-klick ausführen des Befehls\n"
+"       Rechts          - Taste auswählen durch klick, doppel-klick bearbeiten der Datei\n"
 
 #. type: Plain text
 #: ../README.md:114
+msgid "## DOWNLOAD"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:116
+#, no-wrap
+msgid "    [Download admm Binary][releases]\n"
+msgstr "    [admm Programm herunterladen][releases]\n"
+
+#. type: Plain text
+#: ../README.md:118
 msgid "## CONFIGURATION"
 msgstr "## KONFIGURATION"
 
 #. type: Plain text
-#: ../README.md:116
+#: ../README.md:120
 msgid "- [admm.conf](admm.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:118
+#: ../README.md:122
 msgid "- [admm.man](docs/admm.man)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:120
+#: ../README.md:124
 msgid "- [scripts/debian/index.mnu](scripts/debian/index.mnu)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:122
+#: ../README.md:126
 msgid "- [scripts/debian/index.conf](scripts/debian/index.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:125
+#: ../README.md:129
 msgid "[main]: docs/admm.png"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:127
+#: ../README.md:131
 msgid "[german]: docs/de/README.md"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:129
+#: ../README.md:133
 msgid "[english]: README.md"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:130
+#: ../README.md:135
 msgid "[tutorial]: docs/presentation/"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:136
+msgid "[releases]: https://github.com/unattended-ch/admm/releases/"
 msgstr ""
 
 #~ msgid ""

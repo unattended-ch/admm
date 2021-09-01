@@ -110,6 +110,10 @@
        Left           - Select a button by click, double-click to execute the command
        Right          - Select a button by click, double-click to edit the file
 
+## DOWNLOAD
+
+    [Download admm Binary][releases]
+
 ## CONFIGURATION
 
 - [admm.conf](admm.conf)
@@ -128,3 +132,5 @@
 [english]: README.md
 
 [tutorial]: docs/presentation/
+
+[releases]: https://github.com/unattended-ch/admm/releases/

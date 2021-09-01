@@ -119,8 +119,12 @@
 
 ## MAUS TASTEN
 
-       Left           - Taste auswählen durch klick, doppel-klick ausführen des Befehls
-       Right          - Taste auswählen durch klick, doppel-klick bearbeiten der Datei
+       Links           - Taste auswählen durch klick, doppel-klick ausführen des Befehls
+       Rechts          - Taste auswählen durch klick, doppel-klick bearbeiten der Datei
+
+## DOWNLOAD
+
+    [admm Programm herunterladen][releases]
 
 ## KONFIGURATION
 
@@ -140,3 +144,5 @@
 [english]: README.md
 
 [tutorial]: docs/presentation/
+
+[releases]: https://github.com/unattended-ch/admm/releases/

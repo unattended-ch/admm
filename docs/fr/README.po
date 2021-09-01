@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-01 18:16+0000\n"
+"POT-Creation-Date: 2021-09-01 18:26+0000\n"
 "PO-Revision-Date: 2020-05-04 17:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -257,45 +257,61 @@ msgstr ""
 
 #. type: Plain text
 #: ../README.md:114
-msgid "## CONFIGURATION"
+msgid "## DOWNLOAD"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:116
-msgid "- [admm.conf](admm.conf)"
+#, no-wrap
+msgid "    [Download admm Binary][releases]\n"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:118
-msgid "- [admm.man](docs/admm.man)"
+msgid "## CONFIGURATION"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:120
-msgid "- [scripts/debian/index.mnu](scripts/debian/index.mnu)"
+msgid "- [admm.conf](admm.conf)"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:122
+msgid "- [admm.man](docs/admm.man)"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:124
+msgid "- [scripts/debian/index.mnu](scripts/debian/index.mnu)"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:126
 msgid "- [scripts/debian/index.conf](scripts/debian/index.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:125
+#: ../README.md:129
 msgid "[main]: docs/admm.png"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:127
+#: ../README.md:131
 msgid "[german]: docs/de/README.md"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:129
+#: ../README.md:133
 msgid "[english]: README.md"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:130
+#: ../README.md:135
 msgid "[tutorial]: docs/presentation/"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:136
+msgid "[releases]: https://github.com/unattended-ch/admm/releases/"
 msgstr ""
