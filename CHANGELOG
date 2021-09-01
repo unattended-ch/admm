@@ -38,3 +38,4 @@
 2.0.0.40	Create admm-globals.inc with global variables for cron scripts
 		Shell scripts from plugins/ added to addm-plugins.tar.gz
 		intro() display figlet text intro.logo
+2.0.0.41	admm-cmd.sh unset commands moved to cleanup() to handle trap

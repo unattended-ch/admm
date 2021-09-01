@@ -1,15 +1,16 @@
+# admm
 [README.md - Englisch](/README.md)
 
 [Tutorial Videos](docs/presentation/)
 
 
-### NAME
+## NAME
 
        admm - ADMin Menü TUI
 
 ![Main Page](/docs/admm.png)
 
-### BESCHREIBUNG
+## BESCHREIBUNG
 
        admm ist ein Administrator Menü TUI für Konsole basierend auf Shell scripts
 
@@ -17,7 +18,7 @@
 
        admm wurde entwickelt mit Lazarus und freevision paket
 
-### ÜBERSICHT
+## ÜBERSICHT
 
        - Die Grund Idee ist der Einsatz von existierenden Shell scripts in
          einem Menü
@@ -61,7 +62,7 @@
        - GPG wird verwendet um Verschlüsselte Dateien mit Passwörtern zu
          erstellen und zu lesen.
 
-### OPTIONEN
+## OPTIONEN
 
        -c --changes        changes.log anzeigen
        -d --debug=N        Debug level setzen (see admm.conf)
@@ -75,7 +76,7 @@
        -u                  Starte System dist\-upgrade (siehe index.conf [Commands])
        -a                  Starte System autoremove (siehe index.conf [Commands])
 
-### DATEIEN
+## DATEIEN
 
        /usr/local/bin/admm                               Ausführbare Datei
        /usr/local/etc/admm.conf                          Konfiguration für admm
@@ -88,27 +89,27 @@
        /usr/local/share/admm/output.log                  Logdatei mit Ausgabe der ausgeführten Befehle (Debug= > 0)
        /usr/local/man/admm.man                           Man Seite für admm
 
-### FUNKTIONS TASTEN
+## FUNKTIONS TASTEN
 
-       F1 - Display Help if available (press F6 to create a new man page)
-       F2 - Start mc
-       F3 - Edit index.conf (global menu configuration)
-       F4 - Edit displayed Menu with mcedit
-       F5 - Edit selected Menu or Shell script with mcedit, if not exists create it with template
-       F6 - Edit existing Help or create a new man page
-       F7 - Output of last executed command
-       F8 - Load Mainmenu
-       F9 - Display admm.log
-       F10- Exit
-       SF1- Display admm.man
-       SF2- Run mc in folder wherr menu file is located
-       SF3- Edit admm.conf
-       SF5- Edit functions.inc
-       SF7- Display ouput.log
-       SF8- Run admm-scripts.sh for export to server
-       SF9- Display changes.log
+       F1 - Hilfeseite anzeigen wenn vorhanden (drücke F6 für eine neue Seite)
+       F2 - Starte mc
+       F3 - Bearbeite index.conf (Globale Menü Konfiguration)n
+       F4 - Bearbeite angezeigtes Menü mit mcedit
+       F5 - Bearbeite gewähltes Menü oder Script mit mcedit, wenn die Datei nicht existiert wird sie mit Vorlage erzeugt
+       F6 - Bearbeite existierende Hilfeseite oder erstelle eine neue
+       F7 - Ausgabe des letzten Befehls
+       F8 - Lade Hauptmenü
+       F9 - admm.log Anzeigen
+       F10- Beenden
+       SF1- admm.man anzeigen
+       SF2- mc in Ordner der Menu Datei ausführen
+       SF3- admm.conf bearbeiten
+       SF5- functions.inc bearbeiten
+       SF7- ouput.log anzeigen
+       SF8- admm-scripts.sh ausführen für Server export
+       SF9- changes.log anzeigen
 
-### NAVIGATIONS TASTEN
+## NAVIGATIONS TASTEN
 
        UP-/DOWN-Arrow - Wähle Menü position
        RIGHT-Arrow    - Öffne Untermenü (nicht Shell scripts)
@@ -116,12 +117,12 @@
        SPACE          - Beende Menü or Untermenü
        ENTER          - Ausgewählte Menü position ausführen
 
-### MAUS TASTEN
+## MAUS TASTEN
 
        Left           - Taste auswählen durch klick, doppel-klick ausführen des Befehls
        Right          - Taste auswählen durch klick, doppel-klick bearbeiten der Datei
 
-### KONFIGURATION
+## KONFIGURATION
 
 - [admm.conf](admm.conf)
 
