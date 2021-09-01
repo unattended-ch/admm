@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-01 18:31+0000\n"
-"PO-Revision-Date: 2021-09-01 18:31+0000\n"
+"POT-Creation-Date: 2021-09-01 18:33+0000\n"
+"PO-Revision-Date: 2021-09-01 18:34+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -338,8 +338,8 @@ msgstr ""
 #. type: Plain text
 #: ../README.md:118
 #, no-wrap
-msgid "    [Download admm Binary][releases]\n"
-msgstr "    [admm Programm herunterladen][releases]\n"
+msgid "  [Download binary][releases]\n"
+msgstr "    [admm herunterladen][releases]\n"
 
 #. type: Plain text
 #: ../README.md:120

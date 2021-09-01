@@ -18,6 +18,8 @@
 
 [Anleitungs Videos][tutorial]
 
+[Diskussion][discuss]
+
 ## ÜBERSICHT
 
        - Die Grund Idee ist der Einsatz von existierenden Shell scripts in
@@ -124,7 +126,7 @@
 
 ## DOWNLOAD
 
-    [admm Programm herunterladen][releases]
+    [admm herunterladen][releases]
 
 ## KONFIGURATION
 
@@ -146,3 +148,6 @@
 [tutorial]: docs/presentation/
 
 [releases]: https://github.com/unattended-ch/admm/releases/
+
+[discuss]: https://github.com/unattended-ch/admm/discussions/
+

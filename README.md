@@ -114,7 +114,7 @@
 
 ## DOWNLOAD
 
-    [Download admm Binary][releases]
+  [Download binary][releases]
 
 ## CONFIGURATION
 
