@@ -6,7 +6,7 @@
 
    Manage your server from console
 
-   [Scripts](scripts/debian/vms) for VirtualBox console manipulation are included 
+   ![][Scripts](docs/new.png) [Scripts](scripts/debian/vms) for VirtualBox console manipulation are included 
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
