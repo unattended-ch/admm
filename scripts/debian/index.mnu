@@ -3,6 +3,6 @@ MENU "g" "* System Upgradable"        "$PWD/scripts/debian/install/ubuntu/ubuntu
 MENU "u" "* System Upgrade"           "$PWD/scripts/debian/install/ubuntu/ubuntu-update.sh"  "$PWD/scripts/debian/install/ubuntu"
 MENU "a" "* System Autoremove"        "$PWD/scripts/debian/install/ubuntu/ubuntu-remove.sh"  "$PWD/scripts/debian/install/ubuntu"
 !MENU_
-!MENU "V" "- Virtualbox VMs Menu"       "$PWD/scripts/debian/vms/vms.mnu"                      "$PWD/scripts/debian"
+!MENU "V" "- Virtualbox VMs Menu"     "$PWD/scripts/debian/vms/vms.mnu"                      "$PWD/scripts/debian"
 MENU_
 MENU "M" "admm Maintenance Menu"      "$PWD/scripts/debian/admm.mnu"                         "$PWD/scripts/debian"
