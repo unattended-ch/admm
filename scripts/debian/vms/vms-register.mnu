@@ -1,0 +1,6 @@
+HEADER "VM Register Menu"
+MENU "r" "* Register VM"               "$SWD/vms/vms-register.sh"       ""
+MENU "u" "* Unregister VM"             "$SWD/vms/vms-unregister.sh"     ""
+MENU_
+MENU "r" "* Register all VMs"          "$SWD/vms/vms-all-register.sh"   ""
+MENU "u" "* Unregister all VMs"        "$SWD/vms/vms-all-unregister.sh" ""

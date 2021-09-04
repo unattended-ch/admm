@@ -1,0 +1,15 @@
+HEADER "VM Settings Menu"
+MENU "n" "* Change Netcard"            "$SWD/vms/vms-network.sh"        ""
+MENU "d" "* Change Disk size"          "$SWD/vms/vms-disksize.sh"       ""
+MENU "c" "* Change CPU count"          "$SWD/vms/vms-cpucount.sh"       ""
+MENU "m" "* Change Memory size"        "$SWD/vms/vms-memsize.sh"        ""
+MENU "b" "* Change Boot order"         "$SWD/vms/vms-bootorder.sh"      ""
+MENU_
+MENU "a" "* Autostart VM on"           "$SWD/vms/vms-autostart.sh"      "on"
+MENU "f" "* Autostart VM off"          "$SWD/vms/vms-autostart.sh"      "off"
+MENU_
+MENU "p" "* Compact VDI"               "$SWD/vms/vms-compactdisk.sh"    ""
+MENU "I" "* Export to ISO"             "$SWD/vms/vms-toiso.sh"          ""
+MENU_
+MENU "y" "* Clone dynamic -> static"   "$SWD/vms/vms-clonedynamic.sh"   ""
+MENU "t" "* Clone static -> dynamic"   "$SWD/vms/vms-clonestatic.sh"    ""

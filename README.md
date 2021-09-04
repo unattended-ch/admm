@@ -6,6 +6,8 @@
 
        Manage your server from console
 
+       Scripts for VirtualBox console manipulation are included
+
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary><h2 style="display: inline-block">TABLE OF CONTENTS</h2></summary>
@@ -77,6 +79,8 @@
          index.conf [Commands] -cmd="aa  "=Comment
 
        - GPG is used to create and read encrypted password files for scripts.
+
+       - VirtualBox scripts for manipulation are included
 
 ## OPTIONS
 

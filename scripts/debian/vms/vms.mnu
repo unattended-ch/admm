@@ -1,0 +1,17 @@
+HEADER "Virtualbox VMs Menu [2.0.0.66]"
+MENU "L" "* List all VMs"              "$SWD/vms/vms-list.sh"           "$SWD/vms"
+MENU "i" "* List running VMs"          "$SWD/vms/vms-running.sh"        ""
+MENU_
+MENU "r" "* Start VM"                  "$SWD/vms/vms-start.sh"          ""
+MENU "o" "* Stop  VM"                  "$SWD/vms/vms-stop.sh"           ""
+MENU "s" "* Stop running VMs"          "$SWD/vms/vms-stoprunning.sh"    ""
+MENU "u" "* Restart running VMs"       "$SWD/vms/vms-restart.sh"        ""
+MENU "t" "* Start Autostart VMs"       "$SWD/vms/vms-startauto.sh"      ""
+MENU_
+MENU "E" "* Edit VM"                   "$SWD/vms/vms-edit.sh"           ""
+MENU "C" "* Clone VM"                  "$SWD/vms/vms-clone.sh"          ""
+MENU "I" "* VM Info"                   "$SWD/vms/vms-info.sh"           ""
+MENU_
+MENU "R" "- VM Register Menu"          "$SWD/vms/vms-register.mnu"      "$SWD"
+MENU "x" "- VM Extension Menu"         "$SWD/vms/vms-extension.mnu"     "$SWD"
+MENU "S" "- VM Settings Menu"          "$SWD/vms/vms-config.mnu"        "$SWD"
