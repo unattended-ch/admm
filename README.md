@@ -1,8 +1,6 @@
 [Deutsch][german]
 
-# admm
-
-   ADMin Menu TUI
+# admm -  ADMin Menu TUI
 
    Manage your server from console
 
