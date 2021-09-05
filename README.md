@@ -4,7 +4,7 @@
 
    Manage your server from console
 
-   [new] [Scripts](scripts/debian/vms) for VirtualBox console manipulation are included 
+   ![new] [Scripts](scripts/debian/vms) for VirtualBox console manipulation are included 
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -167,5 +167,5 @@
 
 [discuss]: https://github.com/unattended-ch/admm/discussions/
 
-![new]: docs/new.png
+[new]: docs/new.png
 

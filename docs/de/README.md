@@ -1,10 +1,10 @@
 [English][english]
 
-# admm
+# admm - ADMin Menu TUI
 
-       ADMin Menü TUI
+   Den Server von der Konsole verwalten
 
-       Den Server von der Konsole verwalten
+   ![new] [Scripts](scripts/debian/vms) for VirtualBox console manipulation are included 
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -89,6 +89,8 @@
 
        - GPG wird verwendet um Verschlüsselte Dateien mit Passwörtern zu
          erstellen und zu lesen.
+
+       - VirtualBox scripts for manipulation are included
 
 ## OPTIONEN
 
@@ -176,4 +178,6 @@
 [releases]: https://github.com/unattended-ch/admm/releases/
 
 [discuss]: https://github.com/unattended-ch/admm/discussions/
+
+[new]: docs/new.png
 

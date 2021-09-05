@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-01 19:01+0000\n"
+"POT-Creation-Date: 2021-09-05 10:56+0000\n"
 "PO-Revision-Date: 2020-05-04 17:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -24,19 +24,19 @@ msgstr ""
 
 #. type: Plain text
 #: ../README.md:4
-msgid "# admm"
+msgid "# admm - ADMin Menu TUI"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:6
 #, no-wrap
-msgid "       ADMin Menu TUI\n"
+msgid "   Manage your server from console\n"
 msgstr ""
 
 #. type: Plain text
 #: ../README.md:8
 #, no-wrap
-msgid "       Manage your server from console\n"
+msgid "   ![new] [Scripts](scripts/debian/vms) for VirtualBox console manipulation are included \n"
 msgstr ""
 
 #. type: Plain text
@@ -187,13 +187,18 @@ msgstr ""
 msgid "GPG is used to create and read encrypted password files for scripts."
 msgstr ""
 
-#. type: Plain text
+#. type: Bullet: '       - '
 #: ../README.md:82
+msgid "VirtualBox scripts for manipulation are included"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:84
 msgid "## OPTIONS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:91
+#: ../README.md:93
 #, no-wrap
 msgid ""
 "       -c --changes        Display changes.log\n"
@@ -207,7 +212,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:94
+#: ../README.md:96
 #, no-wrap
 msgid ""
 "       -u                  Run system dist-upgrade (see index.conf [Commands])\n"
@@ -215,12 +220,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:96
+#: ../README.md:98
 msgid "## FILES"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:107
+#: ../README.md:109
 #, no-wrap
 msgid ""
 "       /usr/local/bin/admm                               Executable\n"
@@ -236,12 +241,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:109
+#: ../README.md:111
 msgid "## FUNCTION KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:127
+#: ../README.md:129
 #, no-wrap
 msgid ""
 "       F1 - Display Help if available (press F6 to create a new man page)\n"
@@ -264,12 +269,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:129
+#: ../README.md:131
 msgid "## NAVIGATION KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:135
+#: ../README.md:137
 #, no-wrap
 msgid ""
 "       UP-/DOWN-Arrow - Select Menu position\n"
@@ -280,12 +285,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:137
+#: ../README.md:139
 msgid "## MOUSE KEYS"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:140
+#: ../README.md:142
 #, no-wrap
 msgid ""
 "       Left           - Select a button by click, double-click to execute the command\n"
@@ -293,67 +298,72 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:142
+#: ../README.md:144
 msgid "## DOWNLOAD"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:144
+#: ../README.md:146
 #, no-wrap
 msgid "  [Download binary][releases]\n"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:146
+#: ../README.md:148
 msgid "## CONFIGURATION"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:148
+#: ../README.md:150
 msgid "- [admm.conf](admm.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:150
+#: ../README.md:152
 msgid "- [admm.man](docs/admm.man)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:152
+#: ../README.md:154
 msgid "- [scripts/debian/index.mnu](scripts/debian/index.mnu)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:154
+#: ../README.md:156
 msgid "- [scripts/debian/index.conf](scripts/debian/index.conf)"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:157
+#: ../README.md:159
 msgid "[main]: docs/admm.png"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:159
+#: ../README.md:161
 msgid "[german]: docs/de/README.md"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:161
+#: ../README.md:163
 msgid "[english]: README.md"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:163
+#: ../README.md:165
 msgid "[tutorial]: docs/presentation/"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:165
+#: ../README.md:167
 msgid "[releases]: https://github.com/unattended-ch/admm/releases/"
 msgstr ""
 
 #. type: Plain text
-#: ../README.md:167
+#: ../README.md:169
 msgid "[discuss]: https://github.com/unattended-ch/admm/discussions/"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:171
+msgid "[new]: docs/new.png"
 msgstr ""
