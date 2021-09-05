@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-05 10:56+0000\n"
-"PO-Revision-Date: 2021-09-05 10:53+0000\n"
+"POT-Creation-Date: 2021-09-05 11:03+0000\n"
+"PO-Revision-Date: 2021-09-05 11:05+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -36,8 +36,8 @@ msgstr "   Den Server von der Konsole verwalten\n"
 #. type: Plain text
 #: ../README.md:8
 #, no-wrap
-msgid "   ![new] [Scripts](scripts/debian/vms) for VirtualBox console manipulation are included \n"
-msgstr ""
+msgid "   ![new]  VirtualBox console manipulation [scripts] are included \n"
+msgstr "   ![new]  VirtualBox Konsole [scripts] sind inbegriffen \n"
 
 #. type: Plain text
 #: ../README.md:30
@@ -457,6 +457,11 @@ msgstr ""
 #. type: Plain text
 #: ../README.md:171
 msgid "[new]: docs/new.png"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:173
+msgid "[scripts]: scripts/debian/vms"
 msgstr ""
 
 #~ msgid ""

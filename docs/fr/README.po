@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-05 10:56+0000\n"
+"POT-Creation-Date: 2021-09-05 11:03+0000\n"
 "PO-Revision-Date: 2020-05-04 17:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -36,7 +36,7 @@ msgstr ""
 #. type: Plain text
 #: ../README.md:8
 #, no-wrap
-msgid "   ![new] [Scripts](scripts/debian/vms) for VirtualBox console manipulation are included \n"
+msgid "   ![new]  VirtualBox console manipulation [scripts] are included \n"
 msgstr ""
 
 #. type: Plain text
@@ -366,4 +366,9 @@ msgstr ""
 #. type: Plain text
 #: ../README.md:171
 msgid "[new]: docs/new.png"
+msgstr ""
+
+#. type: Plain text
+#: ../README.md:173
+msgid "[scripts]: scripts/debian/vms"
 msgstr ""

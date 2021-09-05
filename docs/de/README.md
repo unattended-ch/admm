@@ -4,7 +4,7 @@
 
    Den Server von der Konsole verwalten
 
-   ![new] [Scripts](scripts/debian/vms) for VirtualBox console manipulation are included 
+   ![new]  VirtualBox Konsole [scripts] sind inbegriffen 
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -180,4 +180,6 @@
 [discuss]: https://github.com/unattended-ch/admm/discussions/
 
 [new]: docs/new.png
+
+[scripts]: scripts/debian/vms
 
