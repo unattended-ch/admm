@@ -44,5 +44,7 @@
 2.0.0.43	Kill running admm-cmd.sh at exit or on Crtl-C
 2.0.0.44	Use "# " as comment line for .mnu files
 2.0.0.45	F2 start mc in home folder
-2.0.0.46	F1 display description from .sh and .inc for .mnu diplay .man
+2.0.0.46	F1 display description from .sh and .inc and for .mnu display .man
+2.0.0.47	Create temporary filename for admm-cmd.sh
+2.0.0.48	Using $PLG for plugin directory
 2.0.1.0		

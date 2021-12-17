@@ -177,10 +177,8 @@ wait_any_key() {
 # Parameters  : none
 #----------------------------------------------------------------------
 intro() {
-    if [ -f "$(dirname $0)/plugins/logo/intro.logo" ]; then
-        #LOGO=$(cat $(dirname $0)/plugins/logo/intro.logo | sed '/^ *$/d')
-        #PHEADER "$(cat $(dirname $0)/plugins/logo/intro.logo)"
-        PHEADER "$(cat $(dirname $0)/plugins/logo/intro.logo)"
+    if [ -f "$PLG/logo/intro.logo" ]; then
+        PHEADER "$(cat $PLG/logo/intro.logo)"
     else
         HEADER "ADMin Menu (c) unattended.ch"
     fi
@@ -399,6 +397,27 @@ git_latest() {
     else
         printf "$NAME - $VERS\nNothing new...\n"
     fi
+    rm -f $(pwd)/latest
+}
+
+#----------------------------------------------------------------------
+# Function    : git_counter [repo name] [logfile]
+# Description : Get counters of github repository
+#               Send email if new version is available
+# Parameters  : [repo name]  Name of repository
+#               [logfile]    Logfile name for version storage
+#----------------------------------------------------------------------
+git_counter() {
+    if [ ! -f "$(pwd)/latest" ]; then
+        curl --silent "https://api.github.com/repos/$1/releases/latest" -o $(pwd)/latest  # Get latest release from GitHub api
+    fi
+    VERS=$(cat $(pwd)/latest | jq '.tag_name' | sed 's/\"//g' | sed 's/v//g')
+    BODY=$(cat $(pwd)/latest | egrep '"name"|"download_count"')
+    PUBL=$(cat $(pwd)/latest | jq '.published_at' | sed 's/\"//g' | sed 's/[T|Z]/ /g')
+    #if [ "$NAME" == "" ]; then
+        NAME=$1
+    #fi
+    printf "$VERS\n$PUBL\n$BODY\n\n"
     rm -f $(pwd)/latest
 }
 
