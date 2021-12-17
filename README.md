@@ -9,9 +9,9 @@
 
    Manage your server from console
 
-</div>
-
    VirtualBox console manipulation [scripts] are included 
+
+</div>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
